@@ -1,6 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {czech}
+\babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}\IeC {\'U}vod}{7}{section.1}
 \defcounter {refsection}{0}\relax 
@@ -8,64 +7,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Historie}{8}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Druhy a mo\IeC {\v z}nosti prolamov\IeC {\'a}n\IeC {\'\i }}{8}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Druhy k\IeC {\'o}d\IeC {\r u}}{8}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Strojov\IeC {\'e} u\IeC {\v c}en\IeC {\'\i }}{8}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Mo\IeC {\v z}nosti prolamov\IeC {\'a}n\IeC {\'\i }}{10}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Captcha Breaker}{9}{section.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Strojov\IeC {\'e} u\IeC {\v c}en\IeC {\'\i }}{10}{subsubsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Pou\IeC {\v z}it\IeC {\'e} technologie}{9}{subsection.3.1}
+\contentsline {section}{\numberline {3}Captcha Breaker}{12}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Extrakce symbol\IeC {\r u}}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.1}Pou\IeC {\v z}it\IeC {\'e} technologie}{12}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}U\IeC {\v z}ivatelsk\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.2}Prolamovan\IeC {\'e} typy}{14}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i }}{11}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.3}Extrakce symbol\IeC {\r u}}{14}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Styly pro psan\IeC {\'\i } bakal\IeC {\'a}\IeC {\v r}sk\IeC {\'y}ch a diplomov\IeC {\'y}ch prac\IeC {\'\i }}{15}{section.4}
+\contentsline {subsubsection}{\numberline {3.3.1}Podporovan\IeC {\'e} grafick\IeC {\'e} operace}{14}{subsubsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Po\IeC {\v z}adavky a podprovan\IeC {\'a} prost\IeC {\v r}ed\IeC {\'\i }}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {3.4}U\IeC {\v z}ivatelsk\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{14}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}P\IeC {\v r}ep\IeC {\'\i }na\IeC {\v c}e}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {3.5}Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i }}{15}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Geometrie str\IeC {\'a}nky}{16}{subsection.4.3}
+\contentsline {section}{Z\'av\v er}{19}{section*.26}
+\babel@toc {czech}{}
+\babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Sazba \IeC {\v c}\IeC {\'a}st\IeC {\'\i } dokumentu}{16}{section.5}
+\contentsline {section}{Conclusions}{20}{section*.28}
+\babel@toc {english}{}
+\babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Sazba \IeC {\'u}vodn\IeC {\'\i } strany \IeC {\v c}i obsahu}{16}{subsection.5.1}
+\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{21}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Z\IeC {\'a}v\IeC {\v e}ry}{16}{subsection.5.2}
+\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{21}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Matematika}{16}{subsection.5.3}
+\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{21}{appendix.C}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Sazba literatury}{18}{subsection.5.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.1}Sazba bibliografie p\IeC {\v r}es \textsc {Bib}\LaTeX {}}{18}{subsubsection.5.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.4.2}Manu\IeC {\'a}ln\IeC {\'\i } sazba bibliografie}{18}{subsubsection.5.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5}Drobn\IeC {\'a} makra}{18}{subsection.5.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6}Sazba rejst\IeC {\v r}\IeC {\'\i }ku}{19}{subsection.5.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7}Sazba zdrojov\IeC {\'y}ch k\IeC {\'o}d\IeC {\r u}}{19}{subsection.5.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'av\v er}{23}{section*.19}
-\defcounter {refsection}{0}\relax 
-\select@language {czech}
-\defcounter {refsection}{0}\relax 
-\select@language {czech}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{24}{section*.21}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\select@language {czech}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Prvn\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }loha}{25}{appendix.A}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Druh\IeC {\'a} p\IeC {\v r}\IeC {\'\i }loha}{25}{appendix.B}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{25}{appendix.C}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Seznam zkratek}{27}{section*.23}
+\contentsline {section}{Seznam zkratek}{23}{section*.30}

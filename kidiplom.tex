@@ -1,4 +1,4 @@
-%%%  Ukázkový text a dokumentace stylu pro text závěrečné (bakalářské a
+ %%%  Ukázkový text a dokumentace stylu pro text závěrečné (bakalářské a
 %%%  diplomové) práce na KI PřF UP v Olomouci
 %%%  Copyright (C) 2012 Martin Rotter, <rotter.martinos@gmail.com>
 %%%  Copyright (C) 2014 Jan Outrata, <jan.outrata@upol.cz>
@@ -133,23 +133,82 @@
 %% -------------------------------------------------------------------
 
 \newcommand{\BibLaTeX}{\textsc{Bib}\LaTeX}
+\renewcommand\UrlFont{}
 
 
 
 \section{Úvod}
+V posledních letech urazila technologie strojového učení a umělé inteligence velký posun vpřed. Ačkoliv historie vzniku termínu strojové učení sahá do  60. let 20. století, masová adaptace nastává až v posledních několika letech, kdy se lze s pojmy umělá inteligence či AI (z anglického \textit{artificial intelligence} \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_}}. Můžeme se domnívat, že jistou spojitost s nárůstem zájmu o strojové učení má i zpřístupnění open-source nástrojů, umožňujících snadnou aplikaci příslušných algoritmů, široké veřejnosti \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_,\%2Fg\%2F11gd3905v1,\%2Fg\%2F11bwp1s2k3,\%2Fg\%2F11c1r2rvnp}}.
+
+Cílem této diplomové práce je  rozšíření autorových znalostí v oblasti umělé inteligence. Jako vhodný problém na kterém lze demonstrovat potenciál strojového učení se naskýtá prolamování CAPTCHA zabezpečení. Aktuálně dostupné nástroje strojového učení poskytují elegantní způsob jak prolamovat klasické CAPTCHA zabezpečení. Zřejmě proto lze pozorovat vývoj nových typů CAPTCHA zabezpečení, které využívají některé prvky umělé inteligence. Diplomovou práci lze rozdělit do dvou částí -- první se zabývá samotným problémem CAPTCHA zabezpečení, jeho historií a možným prolamováním. Druhá popisuje aplikaci nazvanou CaptchaBreaker, která popisuje možnost jak lze v rozumném čase řešit problém dekódování některých typů CAPTCHA kódů.
 \newpage
 \section{Captcha}
 \subsection{Historie}
- - důvody vzniku, první captcha, vývoj
-\subsection{Druhy a možnosti prolamování}
- - textová, obrázková, audio, noCaptcha, aka slider na binance
- \subsection{Strojové učení}
+Za akronymem CAPTCHA stojí anglický text \uv{\textbf{C}ompletely \textbf{A}utomated \textbf{P}ublic \textbf{T}uring test to tell \textbf{C}omputers and \textbf{H}umans \textbf{A}part}. Obecně je principem tohoto testu vygenerování určitého typu dotazu a ověření odpovědi, typicky na webových stránkách. Na základě verifikace odpovědi je rozhodnuto, zda systém komunikuje s reálným uživatelem nebo robotem. Některé zdroje uvádějí [česká wiki] pouze přepis textu z deformovaného obrazu do vstupního pole, což lze považovat za zavádějící, jelikož existuje mnoho dalších  variant. 
+
+Důvod pro zavedení takové ochrany je prostý. Pokud je umožněno na web zaslat libovolné požadavky bez omezení (například. příspěvky do diskuzních fór, zakládání uživatelských účtů, pokusy o přihlášení, atd.), lze očekávat že takové příležitosti využije útočník a začne systém zahlcovat, možná s úmyslem zamezit přístupnosti či šíření spamu. Ovšem je nutné mít na paměti, že nutnost ověřovat svou autentičnost je pro uživatele snížením komfortu. Proto se objevují technologie které během prvotní interakce nepožadují ověření žádné, nebo ověřují uživatele natolik sofistikovanými metodami, že není nutná jeho	 interakce.
+
+
+Zajímavým použitím technologie byla digitalizace archivu článků deníku The New York Times či literárních děl společností Google. Slova, která nebylo možné strojově rozpoznat s dostatečnou přesností byla dekódována s použitím nástroje reCAPTCHA. Metoda spočívala vždy v zobrazení obrázků dvou slov v kódu, přičemž u jednoho z nich byl známý jeho obsah. Pokud uživatel zadal správně známou část, o druhé také uvažovalo že je zadaná správně. Samozřejmě takové řešení by bylo příliš naivní a proto lze usuzovat, že za popsaným procesem existuje ještě další ověřovací mechanismus, který porovnává odpovědi uživatelů pro konkrétní slova a přiřadí jim váhu dle jejich výskytu. 
+\subsection{Druhy kódů}
+https://dynomapper.com/blog/514-online-captcha-solving-services-and-available-captcha-types
+https://ai.google/research/pubs/pub43464
+ - textová, obrázková, audio, noCaptcha, aka slider na binance, přihlášení přes sociální media (bot nemá účet), honeypot (skryté fieldy, človek nevidí, bot ano a tak je vyplní)
+ 
+\subsubsection*{Leetspeak} 
+Na úvod je vhodné zmínit tzv. \textit{leetspeak} kódy. V raných fázích internetu se jednalo o přepis znaků, které s užitím jisté míry představivosti tvořily smysluplný text (např. \textit{N04m} jako ekvivalent slova \textit{Noam}), avšak pro útočníka bez znalosti generujícího mechanismu bylo obtížné automatizovat vyplňování kontrolních otázek. Takové ověření bylo možné potkat např. na některých IRC(odkaz co to je) kanálech [zdroj].
+ 
+\subsubsection*{Jednoduchá otázka}
+Velmi triviální metodou, kterak lze implementovat CAPTCHA zabezpečení, je použít jednoduchou textovou hádanku. Jedná se například o otázku typu \textit{Jaký je dnes den?} očekávající na vstupu jednoslovný název dne v týdnu. Obdobně lze hovořit o jednoduchých matematických otázkách \textit{Kolik je 4 krát 6?}. V případě, že není použit sofistikovaný nástroj generující nové druhy otázek je řešení tohoto zabezpečení triviální. Vyvine-li útočník dostatečné úsilí, po několika vygenerování různých otázek lze popsat gramatiku CAPTCHA schématu. Naivním řešením je zkonstruovat mapovací tabulku jednotlivých slov na funkce, se navzájem aplikují. Vzhledem ke konečnosti generovaných výrazů je však možné, že vytvoření formální gramatiky popisující jazyk CAPTCHA schématu a následné vytvoření překladače by mělo větší úspěšnost. Vzhledem k velmi nízkému rozšíření (odkaz) tohoto typu zabezpečení však lze usuzovat, že takové usilí vyvine zanedbatelný počet útočníků. (přesunout možnost prolomení do jiné kapitoly)
+
+\subsubsection*{Zkreslený text}
+Stále běžně se vyskytujícím typem CAPTCHA zabezpečení je přepis textu z deformovaného obrazu uživatelem. Předpokládá se, že bot není schopný vlivem zkreslení provést extrakci jednotlivých symbolů z obrazu. Ztížit čtení obrazu je možné mnoha způsoby - rozostřením textu, spojením jednotlivých znaků, vložením zkreslujících křivek, vynecháním malých částí znaků, atd. V další kapitole se diplomová práce zaměřuje právě na možnost prolomení typů CAPTCHA využívají zkreslování textu v obraze.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{images/text_image_captcha.jpg}
+  \caption{Příklad obrázku, které generovala služba reCAPTCHA (verze 1) obsahující text \uv{Chomsky fake}.}
+  \label{fig:captcha_text_image}
+\end{figure}
+
+
+\subsubsection*{Identifikace objektů v obraze}
+Uživatelsky komfortnějším přístupem, jak rozlišit člověka od počítače, je zobrazit uživateli množinu různých obrázků a požadovat výběr pouze těch, které obsahují nějaký předmět. Zaměříme-li se na technologii Google reCaptcha [odkaz], lze pozorovat dva přístupy k tomuto problému. První variantou je zobrazit uživateli 9 obrázků, ze kterých je například vyžadován výběr pouze těch obsahujíce dopravní značky. Druhý přístup je segmentace obrazu do několika částí a vyžadování výběru pouze těch, které obsahují určitý objekt (například auto). Využití využití podobného přístupu se také využívá k monetizaci obsahu majitelů webů, jelikož existují technologie [odkaz] používající CAPTCHA jako inzertní plochu. 
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{images/squares.png}
+  \caption{Varianta reCAPTCHA v2, kde má uživatel vybrat všechny dlaždice obsahující semafor.}
+  \label{fig:captcha_geetest}
+\end{figure}
+
+\subsubsection*{Skládání puzzle}
+Další variantou CAPTCHA technologie pracující s obrazem nazvěme skládáním puzzle (společnost \textit{GeeTest} \ref{fig:captcha_geetest} používá anglický název \uv{slide}). Přístup spočívá spočívá v přesunu části obrazu ve tvaru dílku puzzle zpět na své původní místo pomocí posuvníku. Během procesu ověření je sledováno několik faktorů ovlivňujících vyhodnocovací proces, například doba posuvu, cesta myši, doplňky prohlížeče. 
+
+\begin{figure}
+  \centering
+  \includegraphics{images/geetest.png}
+  \caption{Varianta GeeTest CAPTCHA používaná na webu \url{binance.com}}
+  \label{fig:captcha_geetest}
+\end{figure}
+
+
+\subsubsection*{Audio CAPTCHA}
+Zabezpečení pomocí textové/obrazové kontrol má nevýhodu v tom, že velmi limituje uživatele se zrakovým postižením, kteří například vnímají odlišně barevné spektrum. Právě proto je vhodné jako sekundární možnost nabídnout tzv. audio CAPTCHA zabezpečení, jehož princip spočívá v přepisu znaků které jsou vloženy do audio záznamu. I zde lze najít různé typy zkreslení zvuku, které zvyšují obtížnost dekódování nahrávky. 
+
+\subsection{Možnosti prolamování}
+ \subsubsection{Strojové učení}
  - NN a CNN
 \newpage
 \section{Captcha Breaker}
-V rámci diplomové práce byla vyvinuta webová aplikace nazvaná CaptchaBreaker. Po prostudování různých přístupů ke tvorbě CAPTCHA schémat a možností jejich prolamování byla vybrána skupina CAPTCHA obrázků pro další studium. Cílem je vytvořit aplikaci, ve které je možné vytvořit dataset CAPTCHA obrázků, zadefinovat způsob prolamování konkrétního schématu a posléze veřejnosti poskytnout nástroj na prolamování konkrétního schématu.
+Cílem diplomové práce bylo demonstrovat možnosti prolamování CAPTCHA zabezpečení, přičemž hlavní inspirace pocházela z textu \texttt{How to Mimic Humans, Guide for Computers}. Byly vybrány různé typy zabezpečení, které ověřují rozpoznání zkresleného textu v obraze. S ohledem na odlišný postup rozpoznání segmentovaných částí obrazů byly prolamovány některé shodné typy zabezpečení. 
+
+Výsledná aplikace se skládá ze dvou částí -- algoritmu rozpoznávajícího různé typy CAPTCHA zabezpečení a webové aplikace, která umožňuje pohodlnou tvorbu datasetu, klasifikátoru a umožňuje prolomit známá schémata.
+
 
 \subsection{Použité technologie}
+\subsubsection*{Python}
+
 \subsubsection*{Flask}
 Flask je microframework určený pro tvorbu webových aplikací napsaný v jazyce Python. Samotné jádro frameworku v základu obsahuje s nadsázkou pouze nástroje pro směrování požadavků a šablonovací systém Jinja. Vyžadujeme-li funkcionalitu navíc, jako například práci s DB, ORM mapování, validaci formulářů nebo autentizaci požadavků, je nutné doinstalovat patřičný modul. Framework se tedy snaží být minimalistický a je pouze na uvážení vývojáře, jaké moduly ke strohému jádru dodá. 
 \subsubsection*{PostgreSQL}
@@ -170,9 +229,22 @@ Spolu s jQuery tvoří CSS knihovna Bootstrap základ velkého množství webů.
 Open-source knihovna zaměřená na strojové učení v jazyce Python. 
 
 
-\subsection{Extrakce symbolů}
- - obecné popsání algoritmu na extrakci symbolů
+\subsection{Prolamované typy}
+ 
+\begin{itemize}
+	\item \textbf{adiseet.mfcr.cz} - Daňový portál Finanční správy České republiky. 
+	\item \textbf{kamody.cz} - Typický příklad e-shopu s nevyhovujícím zabezpečením.
+	\item \textbf{mojedatovaschranka.cz} - Portál určený pro elektronickou komunikaci s úřady. \footnote{V průběhu tvorby diplomové práce došlo k zásadní aktualizaci webové aplikace \texttt{mojedatovaschranka.cz} a původní CAPTCHA zabezpečení bylo nahrazeno technologií Google reCAPTCHA.}
+	\item \textbf{telerik.com} - Domovská stránka frameworku pro ASP.NET, který využívají miliony webů.
+	\item \textbf{ulozto.cz} - Populární služba pro sdílení souborů.
+\end{itemize}
 
+
+\subsection{Extrakce symbolů}
+\subsubsection{Podporované grafické operace}
+\begin{itemize}
+\item 
+\end{itemize}
 \subsection{Uživatelská část}
 Část aplikace, která je dostupná široké veřejnosti, lze rozdělit do dvou skupin -- prezentace známých schémat a API. Domovská stránka seznamuje uživatele zejména s účelem projektu a dává mu možnost vyzkoušet si prolamování CAPTCHA obrázků v praxi. Po výběru obrázku k prolomení a příslušného klasifikátoru je možné zaslat dotaz na server, který z obrázku dekóduje znaky pomocí vybraného klasifikátoru, což je řešeno asynchronním dotazem na API rozhraní. Nastane-li chyba, je uživateli zobrazena příslušná hláška. V případě úspěšného rozpoznání pouze obsah zaslaného obrázku.\\
 
@@ -267,7 +339,7 @@ Jelikož se prvky nástěnky odkazují na pojmy vyjmenované výše, je popis do
 
 
 \subsection*{Další vývoj}
-Jak je patrné již z popisu aplikace, k vytvoření ultimátního nástroje pro lámání CAPTCHA kódů, byť pouze obrázkových, vede ještě dlouhá cesta. Implementace následujících funkcionalit, zejména v administračním rozhraní, by výrazně zlepšila komfort užívání a zřejmě i praktičnost systému jako celku.
+Jak je patrné již z popisu aplikace, k vytvoření ultimativního nástroje pro lámání CAPTCHA kódů, byť pouze obrázkových, vede ještě dlouhá cesta. Implementace následujících funkcionalit, zejména v administračním rozhraní, by výrazně zlepšila komfort užívání a zřejmě i praktičnost systému jako celku.
 
 \begin{itemize}
 \item \textbf{Upozornění na chybně klasifikované znaky.} Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit chybně klasifikované obrázky. Taková chyba může nastat zejména v následujících třech případech: 1) Příliš podobné znaky (číslice nula versus písmeno O). 2) Algoritmus pro extrakci symbolů na výstupu nevrátí celý znak, ale např. pouze jeho část. 3) Symbol byl ručně chybně označen a klasifikátor jej rozpoznává správně.
@@ -288,283 +360,6 @@ Otázky\\
 \item paginace obrázků datasetu
 
 \end{itemize}
-\newpage
-\section{Styly pro psaní bakalářských a diplomových prací}
-Toto jsou styly pro psaní bakalářských a diplomových prací přes typografický systém \LaTeX{}, tedy \textbf{kistyles}.
-
-\subsection{Požadavky a podprovaná prostředí}
-Sada balíku \textbf{kistyles} podporuje následující distribuce systému \LaTeX{}:
-\begin{itemize}
-\item \TeX{} Live.
-\end{itemize}
-
-Jsou podporovány všechny výstupní ovladače, tedy jak \textbf{dvi}, tak \textbf{pdf} i \textbf{ps}. Funkčnost zmiňovaných distribucí byla ověřena na několika operačních systémech, mezi které patří:
-\begin{enumerate}
-\item Windows $8.1$,
-\item Archlinux,
-\item Debian.
-\end{enumerate}
-
-Důrazně se doporučuje používat aktuální verzi dané distribuce systému \LaTeX{}.
-
-%%%  Po přeložení programem CSLaTeX (třikrát) je potřeba použít
-%%%  program DVIPS a takto získaný PostScriptový soubor vytisknout
-%%%  na PostScriptové tiskárně nebo pomocí programu GhostScript.
-%%%
-%%%  Rovněž je možné použít program DVIPDFM a vytvořit z dokumentu
-%%%  soubor ve formátu PDF včetně hypertextových odkazů.
-
-\subsection{Přepínače}
-Styl kidiplom je z hlediska uživatele zastoupen ekvivalentně nazvanou třídou, kterou je třeba volat na záčátku dokumentu:
-\begin{kicode}{TeX}{}{Volání třídy \textbf{kidiplom}}
-\documentclass[false
-  master=true,
-  font=sans,
-  printversion=false,
-  joinlists=true,
-  glossaries=true,
-  figures=true,
-  tables=true,
-  sourcecodes=true,
-  theorems=true,
-  bibencoding=utf8,
-  language=czech,
-  encoding=utf8,
-  field=inf,
-  index=true,
-  biblatex=true
-]{kidiplom}
-\end{kicode}
-
-Následuje přehled přepínačů, je vždy uvedeno jméno přepínač, včetně výchozí hodnoty. Přepínače uvádí tabulka \ref{tab:prepinace}.
-
-\begin{table}
-\begin{center}
-\caption{Seznam přepínačů}\label{tab:prepinace}
-\scalebox{0.95}{\begin{tabular}{>{\bfseries}l >{\ttfamily}c L{8cm}}
-{\normalfont Přepínač} & {\normalfont Výchozí hodnota} & {\normalfont Popis} \\
-\hline
-master & false & Povolí nebo zakáže režim diplomové práce. Výchozí režim je tedy bakalářská práce. \\
-
-field & ainfp & Specifikuje studijní obor:\newline
-\begin{description}
-\item[ainf] Aplikovaná informatika\,--\,prezenční,
-\item[ainfk] Aplikovaná informatika\,--\,kombinovaná,
-\item[inf] Informatika\,--\,prezenční,
-\item[infv] Informatika ve vzdělávání\,--\,kombinovaná,
-\item[binf] Bioinformatika\,--\,prezenční.
-\end{description} \\
-
-font & serif & Zapne či vypne podporu pěkného bezpatkového fontu. Možné hodnoty jsou:\newline
-\begin{description}
-\item[sans] Bezpatkové písmo (písmo Iwona).
-\item[serif] Patkové písmo (písmo Computer Modern).
-\end{description} \\
-
-%%  'encoding=kódování' pro kódování tohoto a vložených zdrojových
-%%  textů v kódování jiném než výchozím utf8
-encoding & utf8 & Kódování souboru dokumentu, doporučuje se ponechat výchozí hodnotu. \\
-
-bibencoding & utf8 & Kódování souboru bibliografie. Tato volba má smysl pouze, pokud je použita bibliografie skrze balíček \BibLaTeX{}. \\
-
-language & czech & Jazyk práce. \\
-
-printversion & false & Je-li zapnuto, pak budou odkazy vysázeny optimalizovaně pro knižní sazbu. Tuto volbu je nutno použít pro tisk práce. \\
-
-%%% Nepovinné argumenty `tables' a `figures' použijte pouze v případě,
-%%% že váš dokument obsahuje tabulky a obrázky a chcete vytvořit
-%%% jejich seznamy za obsahem.
-%%%
-%%% Argument `joinlists' způsobí zřetězení obsahu a seznamů tabulek a obrázků.
-%%% Není-li použít, všechny seznamy jsou uvedeny na samostatných stránkách.
-
-joinlists & true & Je-li zapnuto, pak seznamy obrázků, tabulek, vět a
-zdrojových kódů sázené za obsahem nebudou rozděleny na samostatné stránky. \\
-
-figures & true & Je-li zapnuto, pak v seznamech položek bude zahrnut seznam obrázků. \\
-
-tables & true & Je-li zapnuto, pak v seznamech položek bude zahrnut seznam tabulek. \\
-
-theorems & false & Je-li zapnuto, pak v seznamech bude zahrnut seznam teorémů. \\
-
-sourcecodes & false & Je-li zapnuto, pak v seznamech bude zahrnut seznam zdrojových kódů. \\
-
-glossaries & false & Je-li zapnuto, pak na konci dokumentu bude vysázen seznam zkratek. \\
-
-index & false & Zapíná podporu sazby rejstříku. \\
-
-biblatex & true & Zapne sazbu bibliografie přes balík \BibLaTeX{}.
-\end{tabular}}
-\end{center}
-\end{table}
-
-\subsection{Geometrie stránky}
-Tento styl používá list velikosti $A4$. Pro sazbu prací je třeba použít jednostrannou sazbu. Levý okraj je rozšířen s ohledem na vazbu výsledné knižní podoby práce.
-
-\section{Sazba částí dokumentu}
-\subsection{Sazba úvodní strany či obsahu}
-Vysázení všech podstatných částí úvodu práce obstará makro \kiinlinecode{TeX}{!}{\\maketitle}. Pro správné vysázení všech částí a meta-informací je potřeba použí makra \kiinlinecode{TeX}{!}{\\title}, \kiinlinecode{TeX}{!}{\\author} a další. Jejich přehled lze najít ve zdrojovém souboru tohoto dokumentu. V případě použítí \textbf{pdf} výstupu se generuje i dodatečná hlavička souboru s meta-informacemi jako je autor dokumentu, název práce či dalšími.
-
-\subsection{Závěry}
-Závěr práce by se měl poskytnout jak v původním jazyce práce, tak v jazyce anglickém. Pro sazbu závěru jsou k dispozici příslušná makra. Berte na vědomí, že v anglickém závěru se aktivuje plně anglická sazba se všemi konvencemi. Tedy je třeba používat anglické uvozovky a další správné typografické prvky.
-
-\begin{kicode}{TeX}{}{Sazba závěrů}
-% Tiskne český závěr práce.
-\begin{kiconclusions}
-Závěr práce v \uv{českém} jazyce.
-\end{kiconclusions}
-
-% Tiskne anglický závěr práce.
-\begin{kiconclusions}[english]
-Thesis conclusions written in \uv{English}.
-\end{kiconclusions}
-\end{kicode}
-
-\subsection{Matematika}
-Pro sazbu matematiky je k dispozici sada standardních maker.
-$$\langle f \rangle, \lfloor g \rfloor,
-\lceil h \rceil, \ulcorner i \urcorner$$
-
-$$\left\{\frac{x^2}{y^3}\right\}$$
-
-$$
-A_{m,n} =
- \begin{pmatrix}
-  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
-  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
-  \vdots  & \vdots  & \ddots & \vdots  \\
-  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
- \end{pmatrix}
-$$
-
-$$
-M = \begin{bmatrix}
-       \frac{5}{6} & \frac{1}{6} & 0           \\[0.3em]
-       \frac{5}{6} & 0           & \frac{1}{6} \\[0.3em]
-       0           & \frac{5}{6} & \frac{1}{6}
-     \end{bmatrix}
-$$
-
-\subsection{Sazba literatury}
-Pro sazbu literatury má uživatel dvě možnosti. Může použít služeb balíků \BibLaTeX{}, který je pro \textbf{kistyles} zapnutý, či lze použít manuální sazbu bibliografie.
-\subsubsection{Sazba bibliografie přes \BibLaTeX{}}
-Při použití tohoto balíku se data o použité literatuře ukládají do dedikovaného textového souboru, ukázku najdete i v tomto stylu pod jménem \kiinlinecode{text}{!}{bibliografie.bib}.
-
-Formát daného souboru je nad rámec této dokumentace a je na každém uživateli, aby si jej nastudoval. Bibliografie se tiskne makrem \kiinlinecode{TeX}{!}{\\printbibliography}. Taktéž v preambuli dokumentu je třeba definovat, který soubor data bibliografie obsahuje, tedy například \kiinlinecode{TeX}{!}{\\bibliography\{bibliografie.bib\}}.
-
-Dokument, který využívá \BibLaTeX{} je následně nutné přeložit jak pomocí překladače zvoleného ovladače, tak pomocí aplikace \kiinlinecode{text}{!}{biber}. Více informací poskytne soubor \kiinlinecode{text}{!}{Makefile} z distribuce tohoto stylu.
-
-Výhodou tohoto přístupu je, že bibliografie se vysází automaticky a (obvykle) není třeba manuální úprava formátování.
-
-\subsubsection{Manuální sazba bibliografie}
-Manuální sazba obnáší vysázení prostředí \kiinlinecode{text}{!}{thebibliography} ručně. To je nad rámec tohoto dokumentu. Ukázku tohoto přístupu lze samozřejmě nalézt ve zdrojovém souboru tohoto dokumentu nebo také \href{http://www.math.uiuc.edu/~hildebr/tex/bibliographies.html}{zde}.
-
-Pro aktivaci manuální sazby bibliografie je třeba volat třídu \kiinlinecode{text}{!}{kidiplom} s parametrem \kiinlinecode{text}{!}{biblatex=false}. Mějte, prosím, na paměti, že v tomto módu jsou makra \kiinlinecode{text}{!}{\\bibliography} a \kiinlinecode{text}{!}{\\printbibliography} nedostupná.
-
-\subsection{Drobná makra}
-Základní styl definuje hned několik maker pro usnadnění práce. Například makro \kiinlinecode{TeX}{!}{\\buno} vysází řetezec \uv{bez újmy na obecnosti}. Je k dispozici i verze s prvním velkým písmenem, \kiinlinecode{TeX}{!}{\\Buno}.
-
-Je rovněž možno přidávat položky do seznamu zkratek. K tomu slouží makro \kiinlinecode{TeX}{!}{\\newacronym}, které lze použít například jednoduše jako \kiinlinecode{TeX}{!}{\\newacronym\{UPOL\}\{UPOL\}\{\\kitextunivcz\}}. Na danou zkratku se pak lze odkazovat jednoduše, \kiinlinecode{TeX}{!}{\\gls\{UPOL\}}.
-
-Sazba uvozovek respektuje nastavení částí dokumentu, a proto se doporučuje používat makro \kiinlinecode{TeX}{!}{\\uv}. V anglické závěru práce toto platí taky, viz tato PDF ukázka.
-
-Styl podporuje sazbu odstavců v tabulkách, více obsahuje tabulka \ref{tab:odstavce}.
-
-\begin{table}
-\begin{center}
-\caption{Seznam přepínačů}\label{tab:odstavce}
-\begin{tabular}{L{4cm}|R{4cm}|L{4cm}}
-\lipsum[23] & \lipsum[22] & \lipsum[21]
-\end{tabular}
-\end{center}
-\end{table}
-
-K dispozici jsou také makra pro sazbu \csharp{} (\kiinlinecode{TeX}{!}{\\csharp}) či \cpp{} (\kiinlinecode{TeX}{!}{\\cpp}).
-
-%% v případě tvorby rejstříku přeložit vygenerovaný soubor .idx
-%% programem Makeindex a v případě tvorby seznamu zkratek spustit
-%% program Makeglossaries s parametrem jméno souboru zdrojového textu
-%% bez přípony a následně opět (dvakrát) přeložit zdrojový text
-%% programem pdfLaTeX.
-
-\subsection{Sazba rejstříku}
-Sazba rejstříku sestává z několika kroků:
-
-\begin{enumerate}
-\item Je třeba přes volbu \kiinlinecode{TeX}{!}{index=true} rejstříkování povolit.
-\item Použítím makra \kiinlinecode{TeX}{!}{\\index} rejstříkovat vybrané pojmy.
-\item Kompilovat s použitím utility \kiinlinecode{TeX}{!}{makeindex}. Pro specifika tohoto kroku si stačí prohlédnout soubor \kiinlinecode{text}{!}{Makefile}.
-\end{enumerate}
-
-Makro \kiinlinecode{TeX}{!}{\\index} je redefinováno tak, že sází klikací odkaz na výraz v rejstříku. Je doporučeno jej použít ihned za výrazem\index{výraz}.
-
-\textbf{Omezení redefinovaného makra \kiinlinecode{TeX}{!}{\\index}}: klikací odkaz nefunguje, pokud použijete konstrukci \kiinlinecode{TeX}{!}{\\index\{výraz|makro\}} (resp. \kiinlinecode{TeX}{!}{\\index\{výraz|(makro\}}), např. \kiinlinecode{TeX}{!}{\\index\{výraz|textit\}}.
-
-Rejstřík lze vysázet pomocí makra \kiinlinecode{TeX}{!}{\\printindex}.
-
-\subsection{Sazba zdrojových kódů}
-Styl nabízí dva způsoby sazby zdrojových kódů:
-
-\begin{enumerate}
-\item Sazbu řádkových kódů, například \kiinlinecode{CSS}{!}{background-color: white;}. K tomu slouží makro formátu \kiinlinecode{TeX}{!}{\\kiinlinecode\{jazyk\}\{separátor\}\{kód\}}. Za separátor je vhodné volit jakýkoliv znak, který se nevyskytuje v samotném sázeném zdrojovém kódu. Za jazyk je nutno dosadit jeden z těchto: C, TeX, PHP, HTML, Lisp, SQL, TeX, Python, Java, TutorialD, text, csharp, cpp, JavaScript, CSS.
-
-\item Sazbu zdrojových kódu do separátních prostředí. Takto vytištěný kód se objeví v seznamu zdrojových kódů. Ukázka například zdrojový kód \ref{kod:cpp}. Ukázku sazby naleznete ve zdrojovém kódu tohoto dokumentu.
-\end{enumerate}
-
-\newacronym{UPOL}{UPOL}{\kitextunivcz}
-
-\begin{definition}[Název definice]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. \gls{UPOL}
-\end{definition}
-
-\begin{proof}[Název důkazu]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{proof}
-
-\begin{remark}[Pumpovací věta]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{remark}
-
-\begin{example}[Pumpovací věta]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{example}
-
-\begin{lemma}[Název definice]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{lemma}
-
-\begin{consequence}[Název důkazu]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{consequence}
-
-\begin{theorem}[Pumpovací věta]
-Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. Abcd. 
-\end{theorem}
-
-
-\begin{kicode}{cpp}{kod:cpp}{\cpp}
-int main("cs acsa") // komentar
-int main("cs acsa") // komentar
-int main("cs acsa") // komentar
-int main("cs acsa") // komentar
-int main("cs acsa") // komentar
-\end{kicode}
-
-\begin{kicode}{JavaScript}{}{JS}
-new object() // komentar
-\end{kicode}
-
-\begin{kicode}{csharp}{}{\csharp}
-public static int main("cs acsa") // komentar
-\end{kicode}
-
-\begin{kicode}{SQL}{}{SQL}
-SELECT * FROM table_1; /* komentar */
-\end{kicode}
-
-\begin{kicode}{TutorialD}{}{TutorialD}
-table_1 AND table_2;
-\end{kicode}
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
 %% nastavený jazyk práce (nepovinným parametrem language makra
