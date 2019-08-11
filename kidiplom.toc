@@ -15,26 +15,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Pou\IeC {\v z}it\IeC {\'e} technologie}{14}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Extrakce symbol\IeC {\r u}}{15}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}U\IeC {\v z}ivatelsk\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{15}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Podporovan\IeC {\'e} grafick\IeC {\'e} operace}{15}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i }}{16}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Rozpozn\IeC {\'a}n\IeC {\'\i } symbol\IeC {\r u}}{19}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Podporovan\IeC {\'e} grafick\IeC {\'e} operace}{18}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}U\IeC {\v z}ivatelsk\IeC {\'a} \IeC {\v c}\IeC {\'a}st}{19}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Extrakce symbol\IeC {\r u}}{23}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Administra\IeC {\v c}n\IeC {\'\i } rozhran\IeC {\'\i }}{20}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.6}Tvorba klasifik\IeC {\'a}toru}{23}{subsection.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'av\v er}{24}{section*.65}
+\contentsline {subsection}{\numberline {3.7}Dal\IeC {\v s}\IeC {\'\i } v\IeC {\'y}voj}{23}{subsection.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Z\'av\v er}{25}{section*.71}
 \babel@toc {czech}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{25}{section*.67}
+\contentsline {section}{Conclusions}{26}{section*.73}
 \babel@toc {english}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{26}{appendix.A}
+\contentsline {section}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{27}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Seznam zkratek}{27}{section*.69}
+\contentsline {section}{Seznam zkratek}{28}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatura}{28}{section*.70}
+\contentsline {section}{Literatura}{29}{section*.76}

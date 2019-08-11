@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.7.6)  11 AUG 2019 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.8.11)  11 AUG 2019 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,17 +1137,67 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box67
 \enitdp@description=\count374
 )
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count375
+\algocf@hangindent=\skip94
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count376
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip95
+\skiplinenumber=\skip96
+\skiprule=\skip97
+\skiphlne=\skip98
+\skiptext=\skip99
+\skiplength=\skip100
+\algomargin=\skip101
+\skipalgocfslide=\skip102
+\algowidth=\dimen165
+\inoutsize=\dimen166
+\inoutindent=\dimen167
+\interspacetitleruled=\dimen168
+\interspacealgoruled=\dimen169
+\interspacetitleboxruled=\dimen170
+\algocf@ruledwidth=\skip103
+\algocf@inoutbox=\box68
+\algocf@inputbox=\box69
+\AlCapSkip=\skip104
+\AlCapHSkip=\skip105
+\algoskipindent=\skip106
+\algocf@nlbox=\box70
+\algocf@hangingbox=\box71
+\algocf@untilbox=\box72
+\algocf@skipuntil=\skip107
+\algocf@capbox=\box73
+\algocf@lcaptionbox=\skip108
+\algoheightruledefault=\skip109
+\algoheightrule=\skip110
+\algotitleheightruledefault=\skip111
+\algotitleheightrule=\skip112
+\c@algocfline=\count377
+\c@algocfproc=\count378
+\c@algocf=\count379
+\algocf@algoframe=\box74
+\algocf@algobox=\box75
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Enabling multilingual quotes.
 Package biblatex Info: Trying to load language 'czech' -> 'czech-iso'...
 Package biblatex Info: ... file 'czech-iso.lbx' found.
-
-(./czech-iso.lbx
+ (./czech-iso.lbx
 File: czech-iso.lbx 
 Package biblatex Info: Trying to load language 'czech'...
 Package biblatex Info: ... file 'czech.lbx' found.
- (./czech.lbx
+(./czech.lbx
 File: czech.lbx 
 Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
 Package biblatex Info: ... file 'english-iso.lbx' found.
@@ -1186,6 +1236,9 @@ Package biblatex Warning: Conflicting options.
 
 (./kidiplom.aux
 
+LaTeX Warning: Label `fig:captcha_geetest' multiply defined.
+
+
 LaTeX Warning: Label `fig:crop_example' multiply defined.
 
 
@@ -1208,9 +1261,6 @@ LaTeX Warning: Label `fig:inverse_example' multiply defined.
 
 
 LaTeX Warning: Label `fig:inverse_example' multiply defined.
-
-
-LaTeX Warning: Label `fig:captcha_geetest' multiply defined.
 
 )
 \openout1 = `kidiplom.aux'.
@@ -1237,16 +1287,16 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count375
-\scratchdimen=\dimen165
-\scratchbox=\box68
-\nofMPsegments=\count376
-\nofMParguments=\count377
+\scratchcounter=\count380
+\scratchdimen=\dimen171
+\scratchbox=\box76
+\nofMPsegments=\count381
+\nofMParguments=\count382
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count378
-\MPscratchDim=\dimen166
-\MPnumerator=\count379
-\makeMPintoPDFobject=\count380
+\MPscratchCnt=\count383
+\MPscratchDim=\dimen172
+\MPnumerator=\count384
+\makeMPintoPDFobject=\count385
 \everyMPtoPDFconversion=\toks55
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1265,7 +1315,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box69
+\AtBeginShipoutBox=\box77
 Package hyperref Info: Link coloring ON on input line 128.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1274,12 +1324,12 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count381
+\c@section@level=\count386
 )
 LaTeX Info: Redefining \ref on input line 128.
 LaTeX Info: Redefining \pageref on input line 128.
 LaTeX Info: Redefining \nameref on input line 128.
-\c@lstlisting=\count382
+\c@lstlisting=\count387
 
 (./kidiplom.glsdefs)
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1421,7 +1471,7 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 8.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (1.35481pt too wide) in paragraph at lines 20--20
+Overfull \hbox (1.35481pt too wide) in paragraph at lines 24--24
  [][] []\T1/lmr/m/n/12 Vlevo p·vodní obrázek, vpravo po ap-likaci uºi-va-tel-sk
 ého pra-hování 
  []
@@ -1465,24 +1515,24 @@ Overfull \hbox (1.36697pt too wide) in paragraph at lines 164--165
  []
 
 [8]
-<images/text_image_captcha.jpg, id=160, 313.17pt x 123.46124pt>
+<images/text_image_captcha.jpg, id=164, 313.17pt x 123.46124pt>
 File: images/text_image_captcha.jpg Graphic file (type jpg)
 <use images/text_image_captcha.jpg>
 Package pdftex.def Info: images/text_image_captcha.jpg  used on input line 171.
 
 (pdftex.def)             Requested size: 250.53633pt x 98.7691pt.
-<images/squares.png, id=161, 402.50375pt x 582.175pt>
+<images/squares.png, id=165, 402.50375pt x 582.175pt>
 File: images/squares.png Graphic file (type png)
 <use images/squares.png>
 Package pdftex.def Info: images/squares.png  used on input line 184.
 (pdftex.def)             Requested size: 163.80109pt x 236.91664pt.
-<images/geetest_select.png, id=162, 365.365pt x 462.72874pt>
+<images/geetest_select.png, id=166, 365.365pt x 462.72874pt>
 File: images/geetest_select.png Graphic file (type png)
 <use images/geetest_select.png>
 Package pdftex.def Info: images/geetest_select.png  used on input line 190.
 (pdftex.def)             Requested size: 163.80109pt x 207.44934pt.
  [9 <./images/text_image_captcha.jpg>]
-<images/geetest.png, id=172, 276.03125pt x 280.04625pt>
+<images/geetest.png, id=176, 276.03125pt x 280.04625pt>
 File: images/geetest.png Graphic file (type png)
 <use images/geetest.png>
 Package pdftex.def Info: images/geetest.png  used on input line 202.
@@ -1495,38 +1545,38 @@ n/12 £i \T1/lmr/m/it/12 GeeTest Click\T1/lmr/m/n/12 , kdy je po náv²t¥vníkovi
 
 [10 <./images/squares.png> <./images/geetest_select.png> <./images/geetest.png>
 ]
-<images/nocaptcha.png, id=180, 310.15875pt x 82.3075pt>
+<images/nocaptcha.png, id=184, 310.15875pt x 82.3075pt>
 File: images/nocaptcha.png Graphic file (type png)
 <use images/nocaptcha.png>
 Package pdftex.def Info: images/nocaptcha.png  used on input line 215.
 (pdftex.def)             Requested size: 163.80109pt x 43.46828pt.
-<images/geetest_click.png, id=181, 309.155pt x 53.19875pt>
+<images/geetest_click.png, id=185, 309.155pt x 53.19875pt>
 File: images/geetest_click.png Graphic file (type png)
 <use images/geetest_click.png>
 Package pdftex.def Info: images/geetest_click.png  used on input line 221.
 (pdftex.def)             Requested size: 163.80109pt x 28.18707pt.
  [11 <./images/nocaptcha.png> <./images/geetest_click.png>] [12]
-<images/eet.png, id=210, 301.125pt x 76.285pt>
+<images/eet.png, id=214, 301.125pt x 76.285pt>
 File: images/eet.png Graphic file (type png)
 <use images/eet.png>
 Package pdftex.def Info: images/eet.png  used on input line 248.
 (pdftex.def)             Requested size: 150.56212pt x 38.1424pt.
-<images/kamody.jpg, id=211, 112.92188pt x 26.34843pt>
+<images/kamody.jpg, id=215, 112.92188pt x 26.34843pt>
 File: images/kamody.jpg Graphic file (type jpg)
 <use images/kamody.jpg>
 Package pdftex.def Info: images/kamody.jpg  used on input line 254.
 (pdftex.def)             Requested size: 112.92159pt x 26.34836pt.
-<images/datovka.png, id=214, 301.125pt x 76.285pt>
+<images/datovka.png, id=218, 301.125pt x 76.285pt>
 File: images/datovka.png Graphic file (type png)
 <use images/datovka.png>
 Package pdftex.def Info: images/datovka.png  used on input line 260.
 (pdftex.def)             Requested size: 150.56212pt x 38.1424pt.
-<images/telerik.jpg, id=215, 135.50626pt x 37.64063pt>
+<images/telerik.jpg, id=219, 135.50626pt x 37.64063pt>
 File: images/telerik.jpg Graphic file (type jpg)
 <use images/telerik.jpg>
 Package pdftex.def Info: images/telerik.jpg  used on input line 266.
 (pdftex.def)             Requested size: 135.5059pt x 37.64052pt.
-<images/ulozto.jpg, id=216, 131.74219pt x 52.69687pt>
+<images/ulozto.jpg, id=220, 131.74219pt x 52.69687pt>
 File: images/ulozto.jpg Graphic file (type jpg)
 <use images/ulozto.jpg>
 Package pdftex.def Info: images/ulozto.jpg  used on input line 272.
@@ -1537,261 +1587,258 @@ Overfull \hbox (13.13927pt too wide) in paragraph at lines 277--278
 ol, krom¥ zmín¥ného
  []
 
-
-Overfull \hbox (7.40225pt too wide) in paragraph at lines 284--285
+[13 <./images/eet.png> <./images/kamody.jpg> <./images/datovka.png> <./images/t
+elerik.jpg> <./images/ulozto.jpg>]
+Overfull \hbox (7.40225pt too wide) in paragraph at lines 285--286
 \T1/lmr/m/n/12 Python. Samotné já-dro frame-worku v zák-ladu ob-sahuje s nad-sá
 zkou pouze nástroje
  []
 
-[13 <./images/eet.png> <./images/kamody.jpg> <./images/datovka.png> <./images/t
-elerik.jpg> <./images/ulozto.jpg>] [14]
-Overfull \hbox (3.76987pt too wide) in paragraph at lines 306--307
+
+Overfull \hbox (7.6059pt too wide) in paragraph at lines 297--297
+[][][][][]$\T1/lmr/m/n/10 https : / / towardsdatascience . com / deep-[]learnin
+g-[]framework-[]power-[]scores-[]2018-[]23607ddf297a$[][]| 
+ []
+
+[14]
+<images/website_public.png, id=251, 634.37pt x 472.76625pt>
+File: images/website_public.png Graphic file (type png)
+<use images/website_public.png>
+Package pdftex.def Info: images/website_public.png  used on input line 313.
+(pdftex.def)             Requested size: 380.62492pt x 283.66193pt.
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+\T1/lmr/m/n/12 Odpov¥¤ v p°í-pad¥ rozpoznání
+ []
+
+[16 <./images/website_public.png>]
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 359.
+<images/datasets_new.png, id=266, 306.4248pt x 325.4559pt>
+File: images/datasets_new.png Graphic file (type png)
+<use images/datasets_new.png>
+Package pdftex.def Info: images/datasets_new.png  used on input line 367.
+(pdftex.def)             Requested size: 306.42404pt x 325.45511pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Overfull \hbox (3.76987pt too wide) in paragraph at lines 383--384
 \T1/lmr/m/n/12 Aplikace mo-men-táln¥ pod-poruje n¥ko-lik grafick-ých op-er-ací,
  které slouºí k p°íprav¥
  []
 
 
-Overfull \hbox (0.83586pt too wide) in paragraph at lines 306--307
+Overfull \hbox (0.83586pt too wide) in paragraph at lines 383--384
 \T1/lmr/m/n/12 navrºena tak, ºe jsou jed-notlivé t°ídy grafick-ých op-er-ací au
 -to-mat-icky p°evoditelné
  []
 
-<images/grayscale_original.jpg, id=242, 112.92188pt x 26.34843pt>
+<images/grayscale_original.jpg, id=278, 112.92188pt x 26.34843pt>
 File: images/grayscale_original.jpg Graphic file (type jpg)
 <use images/grayscale_original.jpg>
-Package pdftex.def Info: images/grayscale_original.jpg  used on input line 313.
+Package pdftex.def Info: images/grayscale_original.jpg  used on input line 390.
 
 (pdftex.def)             Requested size: 163.80109pt x 38.22513pt.
-<images/grayscale_result.png, id=243, 150.5625pt x 35.13126pt>
+<images/grayscale_result.png, id=279, 150.5625pt x 35.13126pt>
 File: images/grayscale_result.png Graphic file (type png)
 <use images/grayscale_result.png>
-Package pdftex.def Info: images/grayscale_result.png  used on input line 317.
+Package pdftex.def Info: images/grayscale_result.png  used on input line 394.
 (pdftex.def)             Requested size: 163.80109pt x 38.22366pt.
-
-Overfull \hbox (2.93279pt too wide) in paragraph at lines 324--325
+[18 <./images/datasets_new.png>]
+Overfull \hbox (2.93279pt too wide) in paragraph at lines 401--402
 \T1/lmr/m/n/12 zp·-sobuje sel-hání al-go-ritmu nalezení ne-jv¥t²ích ploch. Z to
 ho d·vodu byla p°idána
  []
 
-[15 <./images/grayscale_original.jpg> <./images/grayscale_result.png (PNG copy)
->]
-<images/crop_original.png, id=254, 150.5625pt x 35.13126pt>
+<images/crop_original.png, id=286, 150.5625pt x 35.13126pt>
 File: images/crop_original.png Graphic file (type png)
 <use images/crop_original.png>
-Package pdftex.def Info: images/crop_original.png  used on input line 342.
+Package pdftex.def Info: images/crop_original.png  used on input line 419.
 (pdftex.def)             Requested size: 163.80109pt x 38.22366pt.
-<images/crop_result.png, id=255, 144.54pt x 29.10875pt>
+<images/crop_result.png, id=287, 144.54pt x 29.10875pt>
 File: images/crop_result.png Graphic file (type png)
 <use images/crop_result.png>
-Package pdftex.def Info: images/crop_result.png  used on input line 346.
+Package pdftex.def Info: images/crop_result.png  used on input line 423.
 (pdftex.def)             Requested size: 163.80109pt x 32.98932pt.
-<images/otsu_original.png, id=256, 146.5475pt x 31.11626pt>
+<images/otsu_original.png, id=288, 146.5475pt x 31.11626pt>
 File: images/otsu_original.png Graphic file (type png)
 <use images/otsu_original.png>
-Package pdftex.def Info: images/otsu_original.png  used on input line 360.
+Package pdftex.def Info: images/otsu_original.png  used on input line 437.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/otsu_result.png, id=257, 146.5475pt x 31.11626pt>
+<images/otsu_result.png, id=289, 146.5475pt x 31.11626pt>
 File: images/otsu_result.png Graphic file (type png)
 <use images/otsu_result.png>
-Package pdftex.def Info: images/otsu_result.png  used on input line 364.
+Package pdftex.def Info: images/otsu_result.png  used on input line 441.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/inverse_original.png, id=258, 146.5475pt x 31.11626pt>
+<images/inverse_original.png, id=290, 146.5475pt x 31.11626pt>
 File: images/inverse_original.png Graphic file (type png)
 <use images/inverse_original.png>
-Package pdftex.def Info: images/inverse_original.png  used on input line 376.
+Package pdftex.def Info: images/inverse_original.png  used on input line 453.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/inverse_result.png, id=259, 146.5475pt x 31.11626pt>
+<images/inverse_result.png, id=291, 146.5475pt x 31.11626pt>
 File: images/inverse_result.png Graphic file (type png)
 <use images/inverse_result.png>
-Package pdftex.def Info: images/inverse_result.png  used on input line 380.
+Package pdftex.def Info: images/inverse_result.png  used on input line 457.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
- [16 <./images/crop_original.png (PNG copy)> <./images/crop_result.png (PNG cop
-y)> <./images/otsu_original.png (PNG copy)> <./images/otsu_result.png (PNG copy
-)> <./images/inverse_original.png (PNG copy)> <./images/inverse_result.png (PNG
- copy)>]
-<images/custom_original.png, id=267, 146.5475pt x 31.11626pt>
+[19 <./images/grayscale_original.jpg> <./images/grayscale_result.png (PNG copy)
+> <./images/crop_original.png (PNG copy)> <./images/crop_result.png (PNG copy)>
+ <./images/otsu_original.png (PNG copy)> <./images/otsu_result.png (PNG copy)> 
+<./images/inverse_original.png (PNG copy)> <./images/inverse_result.png (PNG co
+py)>]
+<images/custom_original.png, id=301, 146.5475pt x 31.11626pt>
 File: images/custom_original.png Graphic file (type png)
 <use images/custom_original.png>
-Package pdftex.def Info: images/custom_original.png  used on input line 408.
+Package pdftex.def Info: images/custom_original.png  used on input line 485.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/custom_result_0_50.png, id=268, 146.5475pt x 31.11626pt>
+<images/custom_result_0_50.png, id=302, 146.5475pt x 31.11626pt>
 File: images/custom_result_0_50.png Graphic file (type png)
 <use images/custom_result_0_50.png>
-Package pdftex.def Info: images/custom_result_0_50.png  used on input line 412.
+Package pdftex.def Info: images/custom_result_0_50.png  used on input line 489.
 
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/filter_original.png, id=269, 180.675pt x 50.1875pt>
+<images/filter_original.png, id=303, 180.675pt x 50.1875pt>
 File: images/filter_original.png Graphic file (type png)
 <use images/filter_original.png>
-Package pdftex.def Info: images/filter_original.png  used on input line 424.
+Package pdftex.def Info: images/filter_original.png  used on input line 501.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/filter_result.png, id=270, 180.675pt x 50.1875pt>
+<images/filter_result.png, id=304, 180.675pt x 50.1875pt>
 File: images/filter_result.png Graphic file (type png)
 <use images/filter_result.png>
-Package pdftex.def Info: images/filter_result.png  used on input line 428.
+Package pdftex.def Info: images/filter_result.png  used on input line 505.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
- [17 <./images/custom_original.png (PNG copy)> <./images/custom_result_0_50.png
+ [20 <./images/custom_original.png (PNG copy)> <./images/custom_result_0_50.png
  (PNG copy)> <./images/filter_original.png (PNG copy)> <./images/filter_result.
 png (PNG copy)>]
-<images/erosion_original.png, id=282, 180.675pt x 50.1875pt>
+<images/erosion_original.png, id=313, 180.675pt x 50.1875pt>
 File: images/erosion_original.png Graphic file (type png)
 <use images/erosion_original.png>
-Package pdftex.def Info: images/erosion_original.png  used on input line 493.
+Package pdftex.def Info: images/erosion_original.png  used on input line 570.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/erosion_result.png, id=283, 180.675pt x 50.1875pt>
+<images/erosion_result.png, id=314, 180.675pt x 50.1875pt>
 File: images/erosion_result.png Graphic file (type png)
 <use images/erosion_result.png>
-Package pdftex.def Info: images/erosion_result.png  used on input line 497.
+Package pdftex.def Info: images/erosion_result.png  used on input line 574.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/dilation_original.png, id=284, 180.675pt x 50.1875pt>
+<images/dilation_original.png, id=315, 180.675pt x 50.1875pt>
 File: images/dilation_original.png Graphic file (type png)
 <use images/dilation_original.png>
-Package pdftex.def Info: images/dilation_original.png  used on input line 509.
+Package pdftex.def Info: images/dilation_original.png  used on input line 586.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/dilation_result.png, id=285, 180.675pt x 50.1875pt>
+<images/dilation_result.png, id=316, 180.675pt x 50.1875pt>
 File: images/dilation_result.png Graphic file (type png)
 <use images/dilation_result.png>
-Package pdftex.def Info: images/dilation_result.png  used on input line 513.
+Package pdftex.def Info: images/dilation_result.png  used on input line 590.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/closing_original.png, id=286, 180.675pt x 50.1875pt>
+<images/closing_original.png, id=317, 180.675pt x 50.1875pt>
 File: images/closing_original.png Graphic file (type png)
 <use images/closing_original.png>
-Package pdftex.def Info: images/closing_original.png  used on input line 525.
+Package pdftex.def Info: images/closing_original.png  used on input line 602.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/closing_result.png, id=287, 180.675pt x 50.1875pt>
+<images/closing_result.png, id=318, 180.675pt x 50.1875pt>
 File: images/closing_result.png Graphic file (type png)
 <use images/closing_result.png>
-Package pdftex.def Info: images/closing_result.png  used on input line 529.
+Package pdftex.def Info: images/closing_result.png  used on input line 606.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/opening_original.png, id=288, 180.675pt x 50.1875pt>
+ [21 <./images/erosion_original.png (PNG copy)> <./images/erosion_result.png (P
+NG copy)> <./images/dilation_original.png (PNG copy)> <./images/dilation_result
+.png (PNG copy)>]
+<images/opening_original.png, id=330, 180.675pt x 50.1875pt>
 File: images/opening_original.png Graphic file (type png)
 <use images/opening_original.png>
-Package pdftex.def Info: images/opening_original.png  used on input line 541.
+Package pdftex.def Info: images/opening_original.png  used on input line 618.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/opening_result.png, id=289, 180.675pt x 50.1875pt>
+<images/opening_result.png, id=331, 180.675pt x 50.1875pt>
 File: images/opening_result.png Graphic file (type png)
 <use images/opening_result.png>
-Package pdftex.def Info: images/opening_result.png  used on input line 545.
+Package pdftex.def Info: images/opening_result.png  used on input line 622.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
- [18 <./images/erosion_original.png (PNG copy)> <./images/erosion_result.png (P
-NG copy)> <./images/dilation_original.png (PNG copy)> <./images/dilation_result
-.png (PNG copy)> <./images/closing_original.png (PNG copy)> <./images/closing_r
-esult.png (PNG copy)>]
-Overfull \hbox (2.1586pt too wide) in paragraph at lines 571--572
-\T1/lmr/m/n/12 jména s ú£elem pro-jektu a dává mu moºnost vyzk-ou²et si pro-lam
--ování CAPTCHA
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+ [22 <./images/closing_original.png (PNG copy)> <./images/closing_result.png (P
+NG copy)> <./images/opening_original.png (PNG copy)> <./images/opening_result.p
+ng (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 
  []
 
-<images/website_public.png, id=298, 634.37pt x 472.76625pt>
-File: images/website_public.png Graphic file (type png)
-<use images/website_public.png>
-Package pdftex.def Info: images/website_public.png  used on input line 577.
-(pdftex.def)             Requested size: 380.62492pt x 283.66193pt.
-[19 <./images/opening_original.png (PNG copy)> <./images/opening_result.png (PN
-G copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
-\T1/lmr/m/n/12 Odpov¥¤ v p°í-pad¥ rozpoznání
- []
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 669.
 
-
-Overfull \hbox (10.01926pt too wide) in paragraph at lines 621--622
-\T1/lmr/m/n/12 ƒást webu dos-tupná pouze ad-min-istrá-torovi je dos-tupná na UR
-L \T1/pcr/m/n/12 /admin\T1/lmr/m/n/12 . V²echny
- []
-
-
-Overfull \hbox (13.4303pt too wide) in paragraph at lines 621--622
-\T1/pcr/m/n/12 APP_USERNAME \T1/lmr/m/n/12 a \T1/pcr/m/n/12 APP_PASSWORD \T1/lm
-r/m/n/12 v kon-fig-u-ra£ním souboru. Bezpe£nost takového
- []
-
-[20 <./images/website_public.png>]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 623.
-
-Overfull \hbox (4.39192pt too wide) in paragraph at lines 624--625
-\T1/lmr/m/n/12 Proces nahrání datasetu ob-sahuje kon-fig-urá-tor vytvo°ený po-m
-ocí kni-hoven jQuery
- []
-
-
-Overfull \hbox (10.66576pt too wide) in paragraph at lines 629--630
-\T1/lmr/m/n/12 dataset. Po odeslání poºa-davku na vytvo°ení klasi-fiká-toru je 
-samotná fáze trénování
- []
-
-
-Overfull \hbox (0.12044pt too wide) in paragraph at lines 629--630
-\T1/lmr/m/n/12 spu²t¥na na pozadní a ad-min-istrá-tor je p°es-m¥rován na nást¥n
-ku, kde vidí pr·b¥h
- []
-
-[21]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 641.
-
- (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 641.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 669.
 
-Overfull \hbox (3.38155pt too wide) in paragraph at lines 641--642
-\T1/lmr/m/n/12 taily klasi-fiká-toru se naskýtá moºnost zo-brazit chybn¥ klasi-
-fiko-vané obrázky.
+Overfull \hbox (28.91304pt too wide) in paragraph at lines 675--676
+\T1/lmr/m/n/12 kód·, by´ pouze obrázkových, nebyl vytvo°en. Im-ple-men-tace nás
+le-du-jících funkcionalit,
+ []
+
+[23]
+Overfull \hbox (25.49411pt too wide) in paragraph at lines 689--690
+\T1/lmr/m/n/12 Druhá chyba z prvního odstavce popisuje ne-správné rozpoznání sy
+m-bolu v CAPTCHA
  []
 
 
-Overfull \hbox (2.11394pt too wide) in paragraph at lines 643--644
-\T1/lmr/m/n/12 rozpoznány. P°ímý d·sledek to-hoto °e²ení je nutná úprava pro-ce
-su trénování
+Overfull \hbox (7.1656pt too wide) in paragraph at lines 689--690
+\T1/lmr/m/n/12 Aby-chom za-mezili trénování klasi-fiká-toru na chyb-ných dat-ec
+h, je vhod-n¥j²í poskyt-
  []
 
-[22]
-Overfull \hbox (3.17836pt too wide) in paragraph at lines 646--647
-[]\T1/lmr/bx/n/12 Klasifikátor pouºí-va-jící více dataset·. \T1/lmr/m/n/12 K da
-l²ímu zlep²ení rozpoznávání
+
+Overfull \hbox (8.53975pt too wide) in paragraph at lines 689--690
+\T1/lmr/m/n/12 nout moºnost ode-brat jed-notlivé sym-boly z datasetu, které byl
+y ²patn¥ rozpoznány. 
  []
 
-[23] [24
 
-] [25
+Overfull \hbox (12.70566pt too wide) in paragraph at lines 692--693
+\T1/lmr/m/n/12 rozpozná-vaným typ·m CAPTCHA obrázk·. Rovn¥º pro ú£ely porovnání
+ úsp¥²nosti
+ []
+
+[24]
+Overfull \hbox (11.38745pt too wide) in paragraph at lines 703--705
+\T1/lmr/m/n/12 kód·. Ex-is-tuje v²ak mnoho pros-toru pro dal²í vývoj, který by 
+us-nad-nil rozpoznávání
+ []
+
+[25
+
+] [26
 
 ]
-Overfull \hbox (4.00964pt too wide) in paragraph at lines 678--680
+Overfull \hbox (4.00964pt too wide) in paragraph at lines 726--728
 \T1/lmr/m/n/12 pot°eb-nými (p°íp. p°evza-tými) kni-hov-nami. Dos-tupné také z [
 ][]$https : / / github .
  []
 
 
-Overfull \hbox (11.49113pt too wide) in paragraph at lines 683--689
+Overfull \hbox (11.49113pt too wide) in paragraph at lines 731--737
 []\T1/lmr/m/n/12 U ve²k-erých cizích p°evza-tých ma-ter-iál· ob-saºených na CD/
 DVD je-jich zahrnutí
  []
 
-[26
+[27
 
-] (./kidiplom.acr) [27
+] (./kidiplom.acr) [28
 
 ]
-Overfull \hbox (13.18135pt too wide) in paragraph at lines 704--704
+Overfull \hbox (13.18135pt too wide) in paragraph at lines 752--752
 \T1/lmr/m/n/12 John C. The End is Nigh: Generic Solv-ing of Text-based CAPTCHAs
 . In. \T1/lmr/m/it/12 WOOT'14
  []
 
-[28
+[29
 
 ] (./kidiplom.ind) 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 717.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 717.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 765.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 765.
 (./kidiplom.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 717.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 717.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 765.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 765.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1799,20 +1846,20 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'kidiplom.run.xml'.
 \openout1 = `kidiplom.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 717.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 765.
  ) 
 Here is how much of TeX's memory you used:
- 29009 strings out of 494587
- 474653 string characters out of 6177760
- 1125883 words of memory out of 5000000
- 31963 multiletter control sequences out of 15000+600000
+ 29957 strings out of 494587
+ 490142 string characters out of 6177759
+ 1149821 words of memory out of 5000000
+ 32885 multiletter control sequences out of 15000+600000
  87536 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  61i,13n,94p,2606b,2541s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm
--mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
+ve/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/f
+onts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
 sr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/te
 xmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm
@@ -1826,10 +1873,10 @@ texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/lm/lmri8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on kidiplom.pdf (28 pages, 1211571 bytes).
+Output written on kidiplom.pdf (29 pages, 1405157 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 134 named destinations out of 1000 (max. 500000)
- 339 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 
