@@ -1969,6 +1969,13 @@
     <bcf:datasource type="file" datatype="bibtex">bibliografie.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">wiki:CAPTCHA</bcf:citekey>
+    <bcf:citekey order="2">web:techcrunch</bcf:citekey>
+    <bcf:citekey order="3">web:textcaptcha</bcf:citekey>
+    <bcf:citekey order="4">web:akita</bcf:citekey>
+    <bcf:citekey order="5">43464</bcf:citekey>
+    <bcf:citekey order="6">Kopp2016HowTM</bcf:citekey>
+    <bcf:citekey order="7">Kopp2016HowTM</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

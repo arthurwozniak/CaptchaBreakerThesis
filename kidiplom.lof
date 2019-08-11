@@ -1,11 +1,35 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces P\IeC {\v r}\IeC {\'\i }klad obr\IeC {\'a}zku, kter\IeC {\'e} generovala slu\IeC {\v z}ba reCAPTCHA (verze 1) obsahuj\IeC {\'\i }c\IeC {\'\i } text \enquote {Chomsky fake}.}}{9}{figure.1}
+\contentsline {figure}{\numberline {1}{\ignorespaces P\IeC {\v r}\IeC {\'\i }klad obr\IeC {\'a}zku, kter\IeC {\'e} generovala slu\IeC {\v z}ba reCAPTCHA (verze 1) obsahuj\IeC {\'\i }c\IeC {\'\i } text \enquote {Chomsky fake}.\relax }}{9}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Varianta reCAPTCHA v2, kde m\IeC {\'a} u\IeC {\v z}ivatel vybrat v\IeC {\v s}echny dla\IeC {\v z}dice obsahuj\IeC {\'\i }c\IeC {\'\i } semafor.}}{11}{figure.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces P\IeC {\v r}\IeC {\'\i }klady CAPTCHA vy\IeC {\v z}aduj\IeC {\'\i }c\IeC {\'\i } ozna\IeC {\v c}en\IeC {\'\i } specifick\IeC {\'y}ch objekt\IeC {\r u}.\relax }}{10}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Varianta GeeTest CAPTCHA pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} na webu \url {binance.com}}}{12}{figure.3}
+\contentsline {figure}{\numberline {3}{\ignorespaces Varianta GeeTest Slide pou\IeC {\v z}\IeC {\'\i }van\IeC {\'a} na webu \url {binance.com}\relax }}{10}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4}{\ignorespaces P\IeC {\v r}\IeC {\'\i }klady CAPTCHA vy\IeC {\v z}aduj\IeC {\'\i }c\IeC {\'\i } minim\IeC {\'a}ln\IeC {\'\i } interakci s u\IeC {\v z}ivatelem.\relax }}{11}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po transformaci do stup\IeC {\v n}\IeC {\r u} \IeC {\v s}edi.\relax }}{15}{figure.caption.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci operace o\IeC {\v r}\IeC {\'\i }znut\IeC {\'\i }.\relax }}{16}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci Otsova prahov\IeC {\'a}n\IeC {\'\i }.\relax }}{16}{figure.caption.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci inverze.\relax }}{16}{figure.caption.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {9}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci u\IeC {\v z}ivatelsk\IeC {\'e}ho prahov\IeC {\'a}n\IeC {\'\i } v rozsahu $0 - 50$.\relax }}{17}{figure.caption.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {10}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po odstran\IeC {\v e}n\IeC {\'\i } spojit\IeC {\'y}ch ploch.\relax }}{17}{figure.caption.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {11}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci morfologick\IeC {\'e} eroze.\relax }}{18}{figure.caption.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {12}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci morfologick\IeC {\'e} dilatace.\relax }}{18}{figure.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci morfologick\IeC {\'e}ho uzav\IeC {\v r}en\IeC {\'\i }.\relax }}{18}{figure.caption.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces Vlevo p\IeC {\r u}vodn\IeC {\'\i } obr\IeC {\'a}zek, vpravo po aplikaci morfologick\IeC {\'e}ho otev\IeC {\v r}en\IeC {\'\i }.\relax }}{19}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces Rozpoznan\IeC {\'y} k\IeC {\'o}d.\relax }}{20}{figure.caption.57}
 \babel@toc {czech}{}
 \babel@toc {czech}{}
 \babel@toc {english}{}

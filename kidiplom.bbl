@@ -1,0 +1,202 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{wiki:CAPTCHA}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CAPTCHA --- {W}ikipedia{,} The Free Encyclopedia}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://cs.wikipedia.org/wiki/CAPTCHA
+      \endverb
+      \verb{url}
+      \verb https://cs.wikipedia.org/wiki/CAPTCHA
+      \endverb
+    \endentry
+    \entry{web:techcrunch}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=97de7a6dde01b9a4b7e4cbe26f5f4831}{%
+           family={TechCruch},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \strng{fullhash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \strng{bibnamehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \strng{authorbibnamehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \strng{authornamehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \strng{authorfullhash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{reCAPTCHA: Using Captchas To Digitize Books | TechCruch}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://techcrunch.com/2007/09/16/recaptcha-using-captchas-to-digitize-books/
+      \endverb
+      \verb{url}
+      \verb https://techcrunch.com/2007/09/16/recaptcha-using-captchas-to-digitize-books/
+      \endverb
+    \endentry
+    \entry{web:textcaptcha}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d285193c44dd6080e8973b04b83d6cec}{%
+           family={Tuley},
+           familyi={T\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d285193c44dd6080e8973b04b83d6cec}
+      \strng{fullhash}{d285193c44dd6080e8973b04b83d6cec}
+      \strng{bibnamehash}{d285193c44dd6080e8973b04b83d6cec}
+      \strng{authorbibnamehash}{d285193c44dd6080e8973b04b83d6cec}
+      \strng{authornamehash}{d285193c44dd6080e8973b04b83d6cec}
+      \strng{authorfullhash}{d285193c44dd6080e8973b04b83d6cec}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TextCaptcha: textual CAPTCHA challenges}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://textcaptcha.com/
+      \endverb
+      \verb{url}
+      \verb http://textcaptcha.com/
+      \endverb
+    \endentry
+    \entry{web:akita}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cd754798f89b0f9035fb860c327fc219}{%
+           family={Ak1T4},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd754798f89b0f9035fb860c327fc219}
+      \strng{fullhash}{cd754798f89b0f9035fb860c327fc219}
+      \strng{bibnamehash}{cd754798f89b0f9035fb860c327fc219}
+      \strng{authorbibnamehash}{cd754798f89b0f9035fb860c327fc219}
+      \strng{authornamehash}{cd754798f89b0f9035fb860c327fc219}
+      \strng{authorfullhash}{cd754798f89b0f9035fb860c327fc219}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bypassing Captcha Like a Boss}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://medium.com/bugbountywriteup/bypassing-captcha-like-a-boss-d0edcc3a1c1
+      \endverb
+      \verb{url}
+      \verb https://medium.com/bugbountywriteup/bypassing-captcha-like-a-boss-d0edcc3a1c1
+      \endverb
+    \endentry
+    \entry{43464}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=59c83757800173e97cfcd3bffbb592fd}{%
+           family={Bursztein},
+           familyi={B\bibinitperiod},
+           given={Elie},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c92fb2ccddde52ade710f1a96cdf3fff}{%
+           family={Aigrain},
+           familyi={A\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a25cb8c021af7882ba2d81a0d2c0761a}{%
+           family={Moscicki},
+           familyi={M\bibinitperiod},
+           given={Angelika},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0e4f337a85b3fc7d880113f73dc447c4}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4254b7d7724582003e4f38012be8be61}
+      \strng{fullhash}{4254b7d7724582003e4f38012be8be61}
+      \strng{bibnamehash}{4254b7d7724582003e4f38012be8be61}
+      \strng{authorbibnamehash}{4254b7d7724582003e4f38012be8be61}
+      \strng{authornamehash}{4254b7d7724582003e4f38012be8be61}
+      \strng{authorfullhash}{4254b7d7724582003e4f38012be8be61}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{WOOT'14 Proceedings of the 8th USENIX conference on Offensive Technologies}
+      \field{title}{The End is Nigh: Generic Solving of Text-based CAPTCHAs}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.elie.net/publication/the-end-is-nigh-generic-solving-of-text-based-captchas
+      \endverb
+      \verb{url}
+      \verb https://www.elie.net/publication/the-end-is-nigh-generic-solving-of-text-based-captchas
+      \endverb
+    \endentry
+    \entry{Kopp2016HowTM}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5cdc0733fa53c4ac22318f1fb298ee38}{%
+           family={Kopp},
+           familyi={K\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=724af95359122f7ccc977f0faced7c9f}{%
+           family={Pistora},
+           familyi={P\bibinitperiod},
+           given={Matous},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7d3abdde6b06f0d4e7d0bbd8437d893f}{%
+           family={Holena},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \strng{fullhash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \strng{bibnamehash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \strng{authorbibnamehash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \strng{authornamehash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \strng{authorfullhash}{c350491fa4de1eec999f1bdb8d9cf23b}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ITAT}
+      \field{title}{How to Mimic Humans, Guide for Computers}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

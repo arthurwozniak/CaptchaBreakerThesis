@@ -171,8 +171,8 @@
       \def\@fieldcz{\@fiendbinfcz, \@presentformcz}
     }{
       % \ifthenelse{\equal{\kid@field}{inf}}
-      \def\@fielden{\@fieldinfen, \@presentformen}
-      \def\@fieldcz{\@fieldinfcz, \@presentformcz}
+          \def\@fielden{\@fieldainfen, \@presentformen}
+          \def\@fieldcz{\@fieldainfcz, \@presentformcz}
     }
   }
 }{
