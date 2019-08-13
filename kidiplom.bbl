@@ -31,8 +31,8 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{CAPTCHA --- {W}ikipedia{,} The Free Encyclopedia}
@@ -56,8 +56,8 @@
       \strng{authorbibnamehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
       \strng{authornamehash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
       \strng{authorfullhash}{97de7a6dde01b9a4b7e4cbe26f5f4831}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{reCAPTCHA: Using Captchas To Digitize Books | TechCruch}
@@ -83,8 +83,8 @@
       \strng{authorbibnamehash}{d285193c44dd6080e8973b04b83d6cec}
       \strng{authornamehash}{d285193c44dd6080e8973b04b83d6cec}
       \strng{authorfullhash}{d285193c44dd6080e8973b04b83d6cec}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{TextCaptcha: textual CAPTCHA challenges}
@@ -108,8 +108,8 @@
       \strng{authorbibnamehash}{cd754798f89b0f9035fb860c327fc219}
       \strng{authornamehash}{cd754798f89b0f9035fb860c327fc219}
       \strng{authorfullhash}{cd754798f89b0f9035fb860c327fc219}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Bypassing Captcha Like a Boss}
@@ -150,8 +150,8 @@
       \strng{authorbibnamehash}{4254b7d7724582003e4f38012be8be61}
       \strng{authornamehash}{4254b7d7724582003e4f38012be8be61}
       \strng{authorfullhash}{4254b7d7724582003e4f38012be8be61}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{WOOT'14 Proceedings of the 8th USENIX conference on Offensive Technologies}
@@ -188,13 +188,88 @@
       \strng{authorbibnamehash}{c350491fa4de1eec999f1bdb8d9cf23b}
       \strng{authornamehash}{c350491fa4de1eec999f1bdb8d9cf23b}
       \strng{authorfullhash}{c350491fa4de1eec999f1bdb8d9cf23b}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{ITAT}
       \field{title}{How to Mimic Humans, Guide for Computers}
       \field{year}{2016}
+    \endentry
+    \entry{documentation:flask}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3f9cff795224f5232cca142b122d6d46}{%
+           family={Pallets},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f9cff795224f5232cca142b122d6d46}
+      \strng{fullhash}{3f9cff795224f5232cca142b122d6d46}
+      \strng{bibnamehash}{3f9cff795224f5232cca142b122d6d46}
+      \strng{authorbibnamehash}{3f9cff795224f5232cca142b122d6d46}
+      \strng{authornamehash}{3f9cff795224f5232cca142b122d6d46}
+      \strng{authorfullhash}{3f9cff795224f5232cca142b122d6d46}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Welcome to Flask - Flask Documentation (1.1.x)}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://flask.palletsprojects.com/en/1.1.x/
+      \endverb
+      \verb{url}
+      \verb https://flask.palletsprojects.com/en/1.1.x/
+      \endverb
+    \endentry
+    \entry{documentation:pytorch}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5bd4c87976f48e6a53919d53e14025e9}{%
+           family={OpenCV},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{fullhash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{bibnamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authorbibnamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authornamehash}{5bd4c87976f48e6a53919d53e14025e9}
+      \strng{authorfullhash}{5bd4c87976f48e6a53919d53e14025e9}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Welcome to PyTorch Tutorials -- PyTorch Tutorials 1.2.0 documentation}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://pytorch.org/tutorials/index.html
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/tutorials/index.html
+      \endverb
+    \endentry
+    \entry{documentation:opencv}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=95b88f180e9eb5678e0f9ebac2cbe643}{%
+           family={PyTorch},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{fullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{bibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorbibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenCV: OpenCV Tutorials}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/master/d9/df8/tutorial_root.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/master/d9/df8/tutorial_root.html
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

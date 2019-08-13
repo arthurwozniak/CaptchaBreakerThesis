@@ -252,7 +252,7 @@ Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA za
 \begin{figure}[H]
   \centering
   \includegraphics{images/kamody.jpg}
-\end{figure}
+\end{figure}1
 
 \item [mojedatovaschranka.cz] Portál určený pro elektronickou komunikaci s úřady.\footnote{V průběhu tvorby diplomové práce došlo k zásadní aktualizaci webové aplikace \url{https://mojedatovaschranka.cz} a původní CAPTCHA zabezpečení bylo nahrazeno technologií Google reCAPTCHA.}
 \begin{figure}[H]
@@ -276,7 +276,6 @@ Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA za
 
 Jelikož je uživatelská příprava datasetu poměrně náročný úkol, kromě zmíněného algoritmu byla vytvořena webová aplikace, která umožňuje spustit průvodce tvorby datasetu nebo klasifikátoru. Zároveň je na stejném webu možné zkusit rozluštit známé typy CAPTCHA schéma. 
 
-
 \subsection{Použité technologie}
 \subsubsection*{Python}
 Populární interpretovaný jazyk podporující různá programovací paradigmata. Jde  se o jeden z nejpopulárnějších jazyků dnešní doby \footnote{\url{https://insights.stackoverflow.com/survey/2019}}, zároveň v oblasti strojového učení poskytuje všechny potřebné knihovny. Nevýhodou jazyka je obtížnost paralelního zpracování dat, což je řešeno knihovnami třetích stran.
@@ -284,7 +283,7 @@ Populární interpretovaný jazyk podporující různá programovací paradigmat
 \subsubsection*{Flask}
 Flask je microframework určený pro tvorbu webových aplikací napsaný v jazyce Python. Samotné jádro frameworku v základu obsahuje s nadsázkou pouze nástroje pro směrování požadavků a šablonovací systém Jinja. Vyžadujeme-li funkcionalitu navíc (jako například práci s DB, ORM mapování, validaci formulářů nebo autentizaci požadavků), je nutné doinstalovat patřičný modul. Framework se tedy snaží být minimalistický a je pouze na uvážení vývojáře, jaké moduly k jádru frameworku dodá. 
 \subsubsection*{PostgreSQL}
-Pro perzistentní uložení informací bylo nutné zvolit některý z relačních databázových systémů. V aplikace bylo zvoleno PostgreSQL, zejména kvůli jeho popularitě a ověřené podpoře JSON sloupců. 
+Pro perzistentní uložení informací bylo nutné zvolit některý z relačních databázových systémů. V aplikace bylo zvoleno PostgreSQL, zejména kvůli jeho popularitě a podpoře JSON datového typu. 
 \subsubsection*{Celery}
 Důležitým vlastností pro některé aplikace je možnost vykonávat některé operace asynchronně. K tomu lze v případě Flasku, respektive Pythonu obecně použít například Celery. Jedná se distribuovaný systém sloužící pro zpracování zasílaných zpráv, které předávány skrze nějakého z podporovaných prostředníků, tzv. brokerů. I když primárně míří na zpracování v reálném čase, podporuje například zařazení obdržených zpráv do fronty a jejich sekvenční zpracování.
 
@@ -380,7 +379,7 @@ Stránka zobrazuje detaily konfigurace klasifikátoru spolu s informacemi o hodn
 
 
 \subsection{Podporované grafické operace}
-Aplikace momentálně podporuje několik grafických operací, které slouží k přípravě obrazu ze kterého jsou extrahovány jednotlivé symboly. Architektura aplikace je navržena tak, že jsou jednotlivé třídy grafických operací automaticky převoditelné do HTML kódu včetně svých argumentů. Zároveň implementují vlastní (de)se\-riali\-zaci, což umožňuje snadnou rozšiřitelnost webového průvodce tvorbou data\-setu.
+Aplikace momentálně podporuje několik grafických operací, které slouží k pří\-pravě obrazu ze kterého jsou extrahovány jednotlivé symboly. Jejich použití je nutné vzhledem k možnému použití metod, které zkreslují znaky zanesené do obrazu. Architektura aplikace je navržena tak, že jsou jednotlivé třídy grafických operací automaticky převoditelné do HTML kódu včetně svých argumentů. Zároveň implementují vlastní (de)se\-riali\-zaci, což umožňuje snadnou rozšiřitelnost webového průvodce tvorbou data\-setu.
 \subsubsection*{Stupně šedi (Grayscale)}
 Operace převádějící obraz z RGB spektra do stupňů šedi.
 \begin{figure}[H]
@@ -561,6 +560,20 @@ kernel\_shape & \texttt{ENUM}  & tvar jádra
 \caption{Argumenty morfologických operací.}
 \end{table}
 
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/kernel_square.png}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{images/kernel_cross.png}
+\end{subfigure}
+\caption{Vlevo morfologické otevření s jádrem tvaru \texttt{čtverec}, vpravo stejná operace s jádrem tvaru \texttt{kříž}. Symbol \texttt{5} je vlevo poškozený.}
+\label{fig:inverse_example}
+\end{figure}
+
 \subsubsection*{Morfologická eroze (Morphological erosion)}
 Hodnota pixelu pod středem jádra zůstává zachována, jsou-li všechny pixely pod nenulovými body jádra také nenulové. V tomto případě dochází k odfiltrování šumu, vyhlazení hran a odstranění hrany obrazu.
 \begin{figure}[H]
@@ -642,27 +655,22 @@ scale\_ratio & \texttt{Integer} & koeficient škálování
 
 
 \subsection{Extrakce symbolů}
-Extrakce symbolů se provádí nad obrázky z uživatelem nahraného archivu podle předem dané konfigurace s využitím grafických operací, které připraví vstupní obraz do vhodné podoby. Výsledkem jsou extrahované jednotlivé znaky do unifikovaného rozměru  $20\times20$ pixelů. \\
+Extrakce symbolů se provádí nad obrázky z uživatelem nahraného datasetu v podobě ZIP archivu. Podporovány jsou všechny obrazové formáty, které podporuje knihovna OpenCV. Ke spuštění extrakce je také potřeba informace o počtu hledaných symbolů v obraze a konfigurace zpracování obrazu. Volitelně je nahrán také slovník přiřazující jednotlivým souborům význam symbolů v nich uložených. Výsledkem jsou extrahované jednotlivé znaky do unifikovaného rozměru  $20\times20$ pixelů, které se následně ukládají do databáze.
 
-\begin{algorithm}[H]
- \KwData{this text}
- \KwResult{how to write algorithm with \LaTeX2e }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
- \caption{Extrakce datasetu.}
-\end{algorithm}
+\subsubsection*{Možné kolize}
+Během procesu extrakce symbolů jsou v obraze hledány spojité plochy pixelů, které mohou představovat symbol CAPTCHA kódu. Ne vždy je však ihned nalezeno požadované množství takových oblastí. 
+\begin{itemize}
+\item \textbf{Byl nalezen velký počet spojitých ploch.} Proces předzpracování obrazu nemusí v některých případech vyčistit obraz v žádoucí kvalitě a proto může být nalezeno více ploch, spojitých ploch obrazu, které lze považovat za symbol. V takovém případě se pro každou takovou oblast vypočítá její velikost a zachová se použe $n$ největších, kde $n$ značí počet hledaných symbolů.
+
+\item \textbf{Byl nalezen malý počet spojitých ploch.} V některé CAPTCHA obrázky mohou být natolik deformovány, že se symboly v nich obsažené navzájem prolínají. Takovou vadu lze například odstranit spočítáním tzv. lokálních minim v jednotlivých spojitých plochách. Každé takové lokální minimum se označí hodnotou určující rovnoměrnost rozdělení obsaženého symbolu. Dokud není určeno $n$ oblastí obsahující symbol, vybere se a rozdělí taková spojitá plocha, jejíž ohodnocení rozdělení je maximální.
+\end{itemize}
+
 
 \subsection{Tvorba klasifikátoru}
+Klasifikátorem se rozumí algoritmus, jehož účelem je přiřadit vstupnímu prvku správnou kategorii na základě trénovacích dat, se kterými byl algoritmus trénován. Konkrétně v případě rozpoznání symbolů v navrženém algoritmu se jedná o přiřazení indexu v poli známých symbolů datasetu. Klasifikátor může být implementován různými způsoby, práce používá konvoluční neuronovou síť.
 
 \subsubsection*{Konvoluční neuronová síť}
+Architektura použité konvoluční neuronové sítě se skládá z 
 
 \begin{itemize}
 \item \textbf{momentum}
@@ -670,8 +678,51 @@ Extrakce symbolů se provádí nad obrázky z uživatelem nahraného archivu pod
 \end{itemize}
 V této fázi máme extrahovány jednotlivé symboly z CAPTCHA obrázků o normovaném rozměru $20\times20$ pixelů. V posled
 
+\subsection{Úspěšnost implementované metody prolamování}
+Pro ověření úspěšnosti navržené metody prolamování CAPTCHA kódů bylo z webů uvedených v úvodu kapitoly staženo a manuálně označeno 400 různých obrázků, ze kterých byly vytvořeny datasety. Následně se pro každý dataset vytvořil klasifikátor a provedla se křížová validace.  
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Název webu} & \textbf{Úspěšnost}
+\\ \hline
+adiseet.mfcr.cz & 0.9610
+\\ \hline
+kamody.cz & 0.9983
+\\ \hline
+mojedatovaschranka.cz & 0.9915
+\\ \hline
+telerik.com & 0.7705
+\\ \hline
+ulozto.cz & 0.3568
+\\ \hline
+\end{tabular}
+\caption{Úspěšnost rozpoznání jednotlivých symbolů CAPTCHA kódů metodou této navrženou v této práci.}
+\label{succesful_rate_mine}
+\end{table}
+
+Porovnáme-li úspěšnosti rozpoznání symbolů v tabulce \ref{succesful_rate_mine} oproti tabulce \ref{succesful_rate_mimic}, lze pozorovat mírný nárůst úspěšnosti prolamování, resp. klasifikace konvoluční neuronovou sítí oproti algoritmu k-NN.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Název webu} & \textbf{Úspěšnost}
+\\ \hline
+mojedatovaschranka.cz & 0.82
+\\ \hline
+ulozto.cz & 0.14
+\\ \hline
+\end{tabular}
+\caption{Úspěšnost rozpoznání jednotlivých symbolů CAPTCHA kódů v \citep{Kopp2016HowTM}.}
+\label{succesful_rate_mimic}
+\end{table}
+
+Zároveň lze pozorovat význam aplikace zkreslujících křivek na popředí CAPT\-CHA typu použitého na webu \url{https://adiseet.mfcr.cz}. V porov\-nání s obrázky použitými na webu \url{https://mojedatovaschranka.cz}, kde je CAPTCHA typ až na umístění zkreslujících křivek shodný, dochází k poklesu úspěšnosti rozpoznání přibližně o  3 procenta.
+
 \subsection{Další vývoj}
-Jak je patrné již z popisu aplikace, ultimativní nástroj pro lámání CAPTCHA kódů, byť pouze obrázkových, nebyl vytvořen. Implementace následujících funkcionalit, zejména v administračním rozhraní, by výrazně zlepšila komfort užívání a zřejmě i praktičnost systému jako celku.
+Ultimativní nástroj pro lámání CAPTCHA kódů, byť pouze obrázkových, nebyl vytvořen. Implementace následujících funkcionalit, zejména v administračním rozhraní, by výrazně zlepšila komfort užívání a zřejmě i praktičnost systému jako celku.
 
 \subsubsection*{Upozornění na chybně klasifikované znaky} 
 Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit chybně klasifikované obrázky. Taková chyba může nastat zejména v následujících třech případech: 
@@ -703,7 +754,7 @@ Vyvinutá webová aplikace úspěšně prolamuje některé typy známých CAPTCH
 \end{kiconclusions}
 
 \begin{kiconclusions}[english]
-Developed web application succesfully breaks certain types of known CAPTCHA codes. However there is many possibilities of furthure development, which would make recongizing of other security types easier. Also it is worth mentioning that retrospecively the choice of the Flask framework seems to be very unfortune due to not so comfortable work with object-relational mapping. Rewriting code base of web application e.g. into Ruby on Rails with retaining machine learning part in Python language would be more optimal because of better sustainability of the application. 
+This developed web application succesfully breaks certain types of known CAPTCHA codes. However there is many possibilities of further development, which would make recongizing of other security types easier.  It is also worth mentioning that retrospecively the choice of the Flask framework seems to be very unfortune due to not so comfortable work with object-relational mapping. Rewriting the code base of web application e.g. into Ruby on Rails with retaining machine learning part in Python language would be more feasible because of better sustainability of the application. 
 \end{kiconclusions}
 
 %% Přílohy obsahu textu práce, za makrem \appendix.
