@@ -29,16 +29,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.8}Dal\IeC {\v s}\IeC {\'\i } v\IeC {\'y}voj}{24}{subsection.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'av\v er}{26}{section*.75}
+\contentsline {section}{Z\'av\v er}{26}{section*.74}
 \babel@toc {czech}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{27}{section*.77}
+\contentsline {section}{Conclusions}{27}{section*.76}
 \babel@toc {english}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{28}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Seznam zkratek}{29}{section*.79}
+\contentsline {section}{Seznam zkratek}{29}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatura}{30}{section*.80}
+\contentsline {section}{Literatura}{30}{section*.79}

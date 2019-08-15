@@ -142,7 +142,7 @@ Cílem této diplomové práce je  rozšíření autorových znalostí v oblasti
 \newpage
 \section{Captcha}
 \subsection{Historie}
-Za akronymem CAPTCHA je skryt anglický text \uv{\textbf{C}ompletely \textbf{A}utomated \textbf{P}ub\-lic \textbf{T}uring test to tell \textbf{C}omputers and \textbf{H}umans \textbf{A}part}. Obecně je principem testu vygenerování určitého typu dotazu a následné ověření odpovědi. Typicky se technologie využívá ve formulářích webových stránek. Na základě verifikace odpovědi je rozhodnuto, zda systém komunikuje s reálným uživatelem nebo robotem. Některé zdroje \cite{wiki:CAPTCHA} uvádějí pouze přepis textu z deformovaného obrazu do vstupního pole, což lze považovat za zavádějící, jelikož existuje několik dalších  variant. 
+Za akronymem CAPTCHA je skryt anglický text \uv{\textbf{C}ompletely \textbf{A}utomated \textbf{P}ub\-lic \textbf{T}uring test to tell \textbf{C}omputers and \textbf{H}umans \textbf{A}part}. Obecně je principem testu vygenerování určitého typu dotazu a následné ověření odpovědi. Typicky se technologie využívá ve formulářích webových stránek. Na základě verifikace odpovědi je rozhodnuto, zda systém komunikuje s reálným uživatelem nebo robotem. Některé zdroje \footnote{\url{https://cs.wikipedia.org/wiki/CAPTCHA}} uvádějí pouze přepis textu z deformovaného obrazu do vstupního pole, což lze považovat za zavádějící, jelikož existuje několik dalších  variant. 
 
 Důvod pro aplikaci takové ochrany je prostý. Pokud je umožněno na web zaslat libovolné požadavky bez omezení (například příspěvky do diskuzních fór, zakládání uživatelských účtů, pokusy o přihlášení, atd.), lze očekávat využití příležitosti útočníkem, který začne systém zahlcovat s úmyslem zamezit přístupnosti či šíření spamu. Ovšem je nutné mít na paměti, že nutnost prokazovat svou autentičnost je pro uživatele snížením komfortu. Proto se objevují technologie které se snaží omezit interakci s uživatelem na minimum. 
 
@@ -219,7 +219,7 @@ Další variantou CAPTCHA technologie pracující s obrazem nazvěme skládání
 \end{figure}
 
 \subsubsection*{Audio CAPTCHA}
-Zabezpečení pomocí textové/obrazové kontroly má nevýhodu v obtížném vyplňováním osobami se zrakovým postižením. Právě proto je vhodné takovým uživatelům nabídnout alternativní možnost (ikonu obecně užívanou pro audio lze nalézt v \ref{fig:captcha_text_image} nebo \ref{fig:recaptcha_selection} ) ověření, aby mohli využívat chráněné služby. Často se tomu děje pomocí tzv. audio CAPTCHA, kdy jsou v nahrávce zakódovány znaky abecedy a uživatel je vyzván k jejich přepisu. V audionahrávkách lze nalézt jisté metody zkreslující zvuk, aby bylo možné předejít automatizovanému zpracování.
+Zabezpečení pomocí textové/obrazové verifikace má nevýhodu v obtížném vyplňováním osobami se zrakovým postižením. Právě proto je vhodné takovým uživatelům nabídnout alternativní možnost (ikonu obecně užívanou pro audio lze nalézt v \ref{fig:captcha_text_image} nebo \ref{fig:recaptcha_selection} ) ověření, aby mohli využívat chráněné služby. Často se~tomu děje pomocí tzv. audio CAPTCHA, kdy jsou v nahrávce zakódovány znaky abecedy a uživatel je vyzván k jejich přepisu. V audionahrávkách lze nalézt jisté metody zkreslující zvuk, aby bylo možné předejít automatizovanému zpracování.
 
 \subsection{Možnosti prolamování}
 \subsubsection*{Nalezení chyby v implementaci}
@@ -252,13 +252,13 @@ Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA za
   \includegraphics[scale=0.5]{images/datovka.png}
 \end{figure}
 
-\item [telerik.com] Framework plantformy ASP.NET využívaný miliony webů.
+\item [telerik.com] Framework pro plantformu ASP.NET.
 \begin{figure}[H]
   \centering
   \includegraphics{images/telerik.jpg}
 \end{figure}
 
-\item  [ulozto.cz] Populární služba pro sdílení souborů.
+\item  [ulozto.cz] Oblíbená služba pro sdílení souborů.
 \begin{figure}[H]
   \centering
   \includegraphics{images/ulozto.jpg}
@@ -352,7 +352,7 @@ Odpověď v případě rozpoznání znaků
  Na nástěnce jsou zobrazeny statistiky příchozích dotazů na rozpoznání obsahu CAPTCHA obrázků a počtu datasetů, resp. klasifikátorů. Existují-li navíc klasifikátory, které se momentálně trénují, jsou na nástěnce zobrazeny informace o stavu procesu. Kromě názvu klasifikátoru je zobrazeno pořadí aktuální iterace, respektive informace o fázi verifikace. Data o trénovaných klasifikátorech jsou pravidelně aktualizována v intervalu 5 vteřin pomocí AJAX dotazů. Po natrénování klasifikátoru je informace i něm z nástěnky odstraněna.
 
 \subsubsection*{Nahrání datasetu \texttt{/dashboard/datasets/new/}}
-Proces nahrání datasetu je zahrnut v jednoduchém průvodci. Administrátor je nejprve vyzván k vybrání ZIP archivu se vzorovými CAPTCHA obrázky. Následně je mu umožněno přiřadit jednotlivým obrázkům texty, které jsou v nich obsaženy. V případě vynechání tohoto kroku se význam textů určuje podle názvu souborů. V posledním kroku je konfigurace grafických operací \ref{fig:dataset_new}, které zkonvertují vstupní obraz do podoby vhodné pro extrahování symbolů. Jakmile je administrátor spokojený s výsledkem, odešle dataset na server a je přesměrován na stránku s jeho detaily.
+Proces nahrání datasetu je zahrnut v jednoduchém průvodci. Administrátor je nejprve vyzván k vybrání ZIP archivu se vzorovými CAPTCHA obrázky. Následně je mu umožněno přiřadit jednotlivým obrázkům texty, které jsou v~nich obsaženy. V případě vynechání tohoto kroku se význam textů určuje podle názvu souborů. V posledním kroku je konfigurace grafických operací (obrázek \ref{fig:dataset_new}), které zkonvertují vstupní obraz do podoby vhodné pro extrahování symbolů. Jakmile je administrátor spokojený s výsledkem, odešle dataset na server a je přesměrován na stránku s jeho detaily.
 
 \begin{figure}[h]
   \centering
@@ -368,8 +368,7 @@ Stručný přehled s informacemi o vytvořeném datasetu. V horní části strá
 Formulář konfigurace klasifikátoru je parametrizován šesti vstupy - názvem klasifikátoru, zdrojovým datasetem, maximálním počtem iterací, velikostí \textit{learning rate}, velikostí \textit{momentum} a případým nastavením křížové validace. Po odeslání požadavku na vytvoření klasifikátoru je samotná fáze trénování spuštěna v asynchronním procesu na pozadí a administrátor je přesměrován na nástěnku, kde vidí průběžně aktualizované informace o trénování klasifikátoru.
 
 \subsubsection*{Detaily klasifikátoru \texttt{/dashboard/classificators/:id/}}
-Stránka zobrazuje detaily konfigurace klasifikátoru spolu s informacemi o hodnotě ztrátové funkce z jednotlivých iterací trénování neuronové sítě. Požadoval-li administrátor také spuštění křížové validace, jsou vypsány úspěšnosti každé ite\-race validace.
-
+Stránka zobrazuje detaily konfigurace klasifikátoru spolu s informací o jeho konfiguraci. Po natrénování klasifikátoru je možné získat informace o hodnotách ztrátové funkce, respektive úspěšnosti křížové validace.
 
 \subsection{Podporované grafické operace}
 Aplikace momentálně podporuje několik grafických operací, které slouží k pří\-pravě obrazu, ze kterého jsou extrahovány jednotlivé symboly. Jejich použití je nutné vzhledem k možnému použití metod, které zkreslují znaky zanesené do~obrazu. Architektura aplikace je navržena tak, že jsou jednotlivé třídy grafických operací automaticky převoditelné do HTML kódu včetně svých argumentů. Zároveň implementují vlastní (de)se\-riali\-zaci, což umožňuje snadnou rozšiřitelnost webového průvodce tvorbou data\-setu.
@@ -419,7 +418,7 @@ size & \texttt{Integer} & velikost ořezu
 \end{figure}
 
 \subsubsection*{Otsovo prahování (Otsu's treshold)}
-Otsovo prahování se používá k automatickému převodu obrazu z odstínů šedi do~binární černobílé podoby. Interně Otsovo prahování analyzuje histogram vstupního obrazu, dle kterého určuje následné rozdělení na popředí/pozadí obrazu. 
+Otsovo prahování se používá k automatickému převodu obrazu z odstínů šedi do~binární černobílé podoby. Interně Otsovo prahování analyzuje histogram vstup\-ního obrazu, dle kterého určuje následné rozdělení na popředí/pozadí obrazu. 
 
 
 \begin{figure}[H]
@@ -500,13 +499,13 @@ Jedná se o pomocnou operaci jejímž účelem je komfortnější obsluha průvo
 \label{fig:inverse_example}
 \end{figure}
 \subsubsection*{Morfologické transformace}
-Před samotným výčtem morfologických operací je vhodné zmínit, o jaký proces se jedná. Morfologická operace očekává na vstupu dva argumenty -- obrázek a~strukturální element (také nazývaný jádro). Pro zjednodušení uvažujme pouze binární obrázky, ačkoliv lze operace zobecnit také na barevné. Jádro i obrázek lze vyjádřit jako matice (v aplikaci je vždy použita čtvercová matice) s hodnotami z množiny $ {0, 1} $. Jádro je posouváno nad jednotlivými pixely vstupního obrázku, jejíž hodnotu mění dle dále popsaných vlastností. Samotné jádro může mít tvar 
+Před samotným výčtem morfologických operací je vhodné zmínit, o jaký proces se jedná. Morfologická operace očekává na vstupu dva argumenty -- obrázek a~strukturální element (také nazývaný jádro). Pro zjednodušení uvažujme pouze binární obrázky, ačkoliv lze operace zobecnit také na barevné. Jádro i obrázek lze vyjádřit jako matice (v aplikaci je vždy použita čtvercová matice) s hodnotami z množiny $ {0, 1} $. Jádro je posouváno nad jednotlivými pixely vstupního obrázku, jejíž hodnotu mění dle dále popsaných vlastností. Samotné jádro je možné určit několika tvary -- jedná se o 
 \begin{enumerate*}[label={\alph*)}]
 \item kříž
 \item kruh nebo
 \item čtverec.
 \end{enumerate*}
-Zmíněné tvary pro jádro velikost $5 \times 5$ jsou vyobrazeny níže.
+Všechny varianty jádra velikosti $5 \times 5$ jsou vyobrazeny níže.
 
 $$
 \begin{bmatrix} 
@@ -660,14 +659,12 @@ Během procesu extrakce symbolů jsou v obraze hledány spojité plochy pixelů,
 
 
 \subsection{Tvorba klasifikátoru}
-Klasifikátorem se rozumí algoritmus, jehož účelem je přiřadit vstupnímu prvku správnou kategorii na základě trénovacích dat, se kterými byl algoritmus trénován. Konkrétně v případě rozpoznání symbolů v navrženém algoritmu se jedná o~při\-řazení indexu v poli známých symbolů datasetu. Klasifikátor může být implementován různými způsoby, práce používá konvoluční neuronovou síť.
+Klasifikátorem se rozumí algoritmus, jehož účelem je přiřadit vstupnímu prvku správnou kategorii na základě trénovacích dat, se kterými byl algoritmus trénován. Konkrétně v případě rozpoznání symbolů v navrženém algoritmu se jedná o~při\-řazení indexu v poli známých symbolů datasetu. Klasifikátor může být implementován různými způsoby. Vyvinutá aplikace používá konvoluční neuronovou síť, jejíž architektura je patrná z příslušné třídy. 
 
-\subsubsection*{Konvoluční neuronová síť}
-Architektura použité konvoluční neuronové sítě se skládá ze dvou konvolučních vrstev.
-Jako optimalizátor je použit algoritmus SGD, který je parametrizovatelný argumenty \textit{learning rate} a \textit{momentum}. Jelikož mají oba dva vliv na přesnost výsledků a rychlost trénování klasifikátoru, je možné je parametrizovat k konfiguraci klasifikátoru.
+Uživatel může v konfigurátoru klasifikátoru nastavit parametry omezující počet iterací, určit velikost \textit{learning rate}, \textit{momentum} a případně zapnout vyko\-nání křížové validace. Doba trénování klasifikátoru se odvíjí od použitého hardware, lze však konstatovat, že vytvořit klasifikátor pro použité datasety trvá maximálně několik minut.
 
 \subsection{Úspěšnost implementované metody prolamování}
-Pro ověření úspěšnosti navržené metody prolamování CAPTCHA kódů bylo z~webů uvedených v úvodu kapitoly staženo a manuálně označeno 400 různých obrázků, ze kterých byly vytvořeny datasety. Následně se pro každý dataset vytvořil klasifikátor a provedla se křížová validace.  
+Pro ověření úspěšnosti navržené metody prolamování CAPTCHA kódů bylo z~webů uvedených v úvodu kapitoly staženo a manuálně označeno 400 různých obrázků, ze kterých byly vytvořeny datasety. Množství trénovacích dat se může na první pohled zdát být malé v porovnání s populárním datasetem MNIST, avšak podle výsledků křížové validace je pro účely diplomové práce postačující.  
 
 \begin{table}[H]
 \centering
@@ -716,7 +713,7 @@ Ultimativní nástroj pro lámání CAPTCHA kódů, byť pouze obrázkových, ne
 Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit upozornění na možné chybně klasifikované symboly. Taková chyba může nastat zejména v následujících třech případech: 
 \begin{itemize}
 \item Příliš podobné znaky (číslice 0 versus písmeno O).
-\item Algoritmus pro extrakci symbolů na výstupu nevrátí celý znak, ale např. pouze jeho část.
+\item Algoritmus pro extrakci symbolů na výstupu nevrátí celý znak, ale například pouze jeho část.
 \item Symbol byl ručně chybně označen a klasifikátor jej rozpoznává správně.
 \end{itemize}
 

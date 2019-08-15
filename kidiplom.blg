@@ -1,14 +1,14 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'kidiplom.blg'
-[23] biber:313> INFO - === Út srp 13, 2019, 20:54:47
-[43] Biber.pm:371> INFO - Reading 'kidiplom.bcf'
-[105] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[119] Biber.pm:3976> INFO - Processing section 0
-[130] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliografie.bib' for section 0
-[130] bibtex.pm:1500> INFO - LaTeX decoding ...
-[138] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliografie.bib'
-[179] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[179] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[179] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs_CZ'
-[188] bbl.pm:617> INFO - Writing 'kidiplom.bbl' with encoding 'UTF-8'
-[192] bbl.pm:720> INFO - Output to kidiplom.bbl
+[21] biber:313> INFO - === Čt srp 15, 2019, 20:53:20
+[38] Biber.pm:371> INFO - Reading 'kidiplom.bcf'
+[87] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[98] Biber.pm:3976> INFO - Processing section 0
+[106] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliografie.bib' for section 0
+[107] bibtex.pm:1500> INFO - LaTeX decoding ...
+[113] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliografie.bib'
+[145] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[145] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[145] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs_CZ'
+[153] bbl.pm:617> INFO - Writing 'kidiplom.bbl' with encoding 'UTF-8'
+[155] bbl.pm:720> INFO - Output to kidiplom.bbl
