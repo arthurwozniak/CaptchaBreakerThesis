@@ -85,21 +85,13 @@
 
 %% Anotace práce, včetně anglické (obvykle překlad z jazyka
 %% práce). Jeden odstavec!
-\annotation{Ukázkový text závěrečné práce na Katedře informatiky
-  Přírodovědecké fakulty Univerzity Palackého v Olomouci, který je
-  zároveň dokumentací stylu pro text práce v \LaTeX{}u. Zdrojový text
-  v \LaTeX{}u je doporučeno použít jako šablonu pro text skutečné
-  závěrečné práce studenta.}
+\annotation{Výsledkem práce je webová aplikace demonstrující vliv různých grafických operací na segmentaci symbolů z obrazu. Zároveň prolamuje známé druhy CAPTCHA kódů.}
 
-\annotation[english]{Sample text of thesis at the \kitextdepten,
-  \kitextfacultyen, \kitextuniven{} and, at the same time,
-  documentation of the \LaTeX{} style for the text. The source text in
-  \LaTeX{} is recommended to be used as a template for real student's
-  thesis text.}
+\annotation[english]{Result of this thesis is web application presenting influence of different graphical operations to character segmentation from image. Application also breaks known types of CAPTCHA codes.}
 
 %% Klíčová slova práce, včetně anglických. Oddělená (obvykle) středníkem.
-\keywords{styl textu; závěrečná práce; dokumentace; ukázkový text}
-\keywords[english]{text style; thesis; documentation; sample text}
+\keywords{strojové učení; prolamování CAPTCHA}
+\keywords[english]{machine learning; breaking CAPTCHA}
 
 %% Volitelná specifikace příloh textu práce, i anglicky. Výchozí je '1
 %% CD/DVD'.
@@ -144,27 +136,27 @@
 
 
 \section{Úvod}
-V posledních letech urazila technologie strojového učení a umělé inteligence velký posun vpřed. Ačkoliv historie vzniku termínu strojové učení sahá do  60. let 20. století, masová adaptace nastává až v posledních několika letech, kdy se lze s pojmy umělá inteligence či AI (z anglického \textit{artificial intelligence}) \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_}}. Můžeme se domnívat, že jistou spojitost s nárůstem zájmu o strojové učení má i zpřístupnění open-source nástrojů, umožňujících snadnou aplikaci příslušných algoritmů, široké veřejnosti \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_,\%2Fg\%2F11gd3905v1,\%2Fg\%2F11bwp1s2k3,\%2Fg\%2F11c1r2rvnp}}.
+V posledních letech urazila technologie strojového učení a umělé inteligence velký posun vpřed. Ačkoliv historie vzniku termínu strojové učení sahá do  60. let 20. století, masová adaptace nastává až v posledních několika letech, kdy se lze s~pojmy umělá inteligence či AI (z anglického \textit{artificial intelligence}) \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_}} setkávat stále častěji. Můžeme se domnívat, že jistou spojitost s nárůstem zájmu o strojové učení má i zpřístupnění open-source nástrojů, umožňujících snadnou aplikaci příslušných algoritmů, široké veřejnosti \footnote{\url{https://trends.google.com/trends/explore?date=all\&q=\%2Fm\%2F01hyh\_,\%2Fg\%2F11gd3905v1,\%2Fg\%2F11bwp1s2k3,\%2Fg\%2F11c1r2rvnp}}.
 
 Cílem této diplomové práce je  rozšíření autorových znalostí v oblasti umělé inteligence. Jako vhodný problém na kterém lze demonstrovat potenciál strojového učení se naskýtá prolamování CAPTCHA zabezpečení. Aktuálně dostupné nástroje strojového učení poskytují elegantní způsob jak prolamovat klasické CAPTCHA zabezpečení. Zřejmě proto lze pozorovat vývoj nových typů CAPTCHA zabezpečení, které využívají některé prvky umělé inteligence. Diplomovou práci lze rozdělit do dvou částí -- první se zabývá samotným problémem CAPTCHA zabezpečení, jeho historií a možným prolamováním. Druhá popisuje aplikaci nazvanou CaptchaBreaker, která popisuje možnost jak lze v rozumném čase řešit problém dekódování některých typů CAPTCHA kódů.
 \newpage
 \section{Captcha}
 \subsection{Historie}
-Za akronymem CAPTCHA je skryt anglický text \uv{\textbf{C}ompletely \textbf{A}utomated \textbf{P}ublic \textbf{T}uring test to tell \textbf{C}omputers and \textbf{H}umans \textbf{A}part}. Obecně je principem testu vygenerování určitého typu dotazu a následné ověření odpovědi. Typicky se technologie využívá ve formulářích webových stránek. Na základě verifikace odpovědi je rozhodnuto, zda systém komunikuje s reálným uživatelem nebo robotem. Některé zdroje \cite{wiki:CAPTCHA} uvádějí pouze přepis textu z deformovaného obrazu do vstupního pole, což lze považovat za zavádějící, jelikož existuje několik dalších  variant. 
+Za akronymem CAPTCHA je skryt anglický text \uv{\textbf{C}ompletely \textbf{A}utomated \textbf{P}ub\-lic \textbf{T}uring test to tell \textbf{C}omputers and \textbf{H}umans \textbf{A}part}. Obecně je principem testu vygenerování určitého typu dotazu a následné ověření odpovědi. Typicky se technologie využívá ve formulářích webových stránek. Na základě verifikace odpovědi je rozhodnuto, zda systém komunikuje s reálným uživatelem nebo robotem. Některé zdroje \cite{wiki:CAPTCHA} uvádějí pouze přepis textu z deformovaného obrazu do vstupního pole, což lze považovat za zavádějící, jelikož existuje několik dalších  variant. 
 
-Důvod pro užívání takové ochrany je prostý. Pokud je umožněno na web zaslat libovolné požadavky bez omezení (například příspěvky do diskuzních fór, zakládání uživatelských účtů, pokusy o přihlášení, atd.), lze očekávat využití příležitosti útočníkem, který začne systém zahlcovat s úmyslem zamezit přístupnosti či šíření spamu. Ovšem je nutné mít na paměti, že nutnost prokazovat svou autentičnost je pro uživatele snížením komfortu. Proto se objevují technologie které se snaží omezit interakci s uživatelem na minimum. 
+Důvod pro aplikaci takové ochrany je prostý. Pokud je umožněno na web zaslat libovolné požadavky bez omezení (například příspěvky do diskuzních fór, zakládání uživatelských účtů, pokusy o přihlášení, atd.), lze očekávat využití příležitosti útočníkem, který začne systém zahlcovat s úmyslem zamezit přístupnosti či šíření spamu. Ovšem je nutné mít na paměti, že nutnost prokazovat svou autentičnost je pro uživatele snížením komfortu. Proto se objevují technologie které se snaží omezit interakci s uživatelem na minimum. 
 
 Zajímavým použitím technologie byla digitalizace archivu článků deníku The New York Times či literárních děl společností Google \cite{web:techcrunch}. Slova, která nebylo možné strojově rozpoznat s dostatečnou přesností byla dekódována s použitím nástroje reCAPTCHA. Metoda spočívala vždy v zobrazení obrázků dvou slov v kódu, přičemž u jednoho z nich byl známý jeho obsah. Pokud uživatel zadal správně známou část, o druhé také uvažovalo že je zadaná správně. Samozřejmě takové řešení by bylo příliš naivní a proto lze usuzovat, že za popsaným procesem existuje ještě další ověřovací mechanismus, který porovnává odpovědi uživatelů pro konkrétní slova a přiřadí jim váhu dle jejich výskytu. 
 \subsection{Druhy kódů}
  
 \subsubsection*{Leetspeak} 
-Na úvod je vhodné zmínit tzv. \textit{leetspeak}\footnote{\url{https://en.wikipedia.org/wiki/Leet}}. V raných fázích internetu se jednalo o přepis znaků, které s užitím jisté míry představivosti tvořily smysluplný text (např. \textit{N04m} jako ekvivalent slova \textit{Noam}), avšak pro útočníka bez znalosti generujícího mechanismu bylo obtížné automatizovat vyplňování kontrolních otázek, respektive sledovat klíčová slova v komunikaci. Ochranu pomocí \textit{leetspeak} bylo možné potkat např. na některých IRC \footnote{\url{https://cs.wikipedia.org/wiki/Internet\_Relay\_Chat}} kanálech.
+Na úvod je vhodné zmínit tzv. \textit{leetspeak}\footnote{\url{https://en.wikipedia.org/wiki/Leet}}. V raných fázích internetu se jednalo o přepis znaků, které s užitím jisté míry představivosti tvořily smysluplný text (např. \textit{N04m} jako ekvivalent slova \textit{Noam}), avšak pro útočníka bez znalosti generujícího mechanismu bylo obtížné automatizovat vyplňování kontrolních otázek, respektive sledovat klíčová slova v komunikaci. Ochranu pomocí \textit{leetspeak} bylo možné potkat např. na některých IRC \footnote{\url{https://en.wikipedia.org/wiki/Internet\_Relay\_Chat}} kanálech.
  
 \subsubsection*{Jednoduchá otázka}
-Velmi triviální metodou, kterak lze implementovat CAPTCHA zabezpečení, je použít jednoduchou textovou hádanku. Jedná se například o otázku typu \textit{Jaký je dnes den?} očekávající na vstupu jednoslovný název dne v týdnu. Obdobně lze hovořit o jednoduchých matematických otázkách \textit{Kolik je 4 krát 6?}. Reálné využití popisuje \cite{web:textcaptcha}. V případě, že není použit sofistikovaný nástroj generující nové druhy otázek je řešení tohoto zabezpečení triviální. Vyvine-li útočník dostatečné úsilí, po několika vygenerování různých otázek lze popsat gramatiku CAPTCHA schématu. Naivním řešením je zkonstruovat mapovací tabulku jednotlivých slov na funkce, se navzájem aplikují. Vzhledem ke konečnosti generovaných výrazů je však možné, že vytvoření formální gramatiky popisující jazyk CAPTCHA schématu a následné vytvoření překladače by mělo větší úspěšnost. Vzhledem k velmi nízkému rozšíření (odkaz) tohoto typu zabezpečení však lze usuzovat, že takové usilí vyvine zanedbatelný počet útočníků. (přesunout možnost prolomení do jiné kapitoly)
+Velmi triviální metodou, kterak lze implementovat CAPTCHA zabezpečení, je použít jednoduchou logickou otázku. Jedná se například o dotazy typu \textit{Jaký je dnes den?}, respektive \textit{Kolik je 4 krát 6?}. Jako odpověď je očekáván jednoslovný název dne v týdnu, respektive celočíselná odpověď. Reál\-né využití popisuje \cite{web:textcaptcha}. V případě, že není použit sofistikovaný nástroj generující nové druhy otázek je řešení tohoto zabezpečení triviální. Vyvine-li útočník dostatečné úsilí, po několika vygenerování různých otázek lze popsat gramatiku CAPTCHA schématu. Naivním řešením je zkonstruovat mapovací tabulku jednotlivých slov na funkce, se navzájem aplikují. Vzhledem ke konečnosti generovaných výrazů je však možné, že vytvoření formální gramatiky popisující jazyk CAPTCHA schématu a následné vytvoření překladače by bylo robustnějším řešením. 
 
 \subsubsection*{Zkreslený text}
-Stále běžně se vyskytujícím typem CAPTCHA zabezpečení je přepis textu z deformovaného obrazu uživatelem. Předpokládá se, že bot není schopný vlivem zkreslení provést extrakci jednotlivých symbolů z obrazu. Ztížit čtení obrazu je možné mnoha způsoby - rozostřením textu, spojením jednotlivých znaků, vložením zkreslujících křivek, vynecháním malých částí znaků, atd. V další kapitole se diplomová práce zaměřuje právě na možnost prolomení typů CAPTCHA využívají zkreslování textu v obraze.
+Stále běžně se vyskytujícím typem CAPTCHA zabezpečení je přepis textu z~deformovaného obrazu uživatelem. Předpokládá se, že bot není schopný vlivem zkreslení provést extrakci jednotlivých symbolů z obrazu. Ztížit čtení obrazu je možné mnoha způsoby - rozostřením textu, spojením jednotlivých znaků, vložením zkreslujících křivek, vynecháním malých částí znaků, atd. V další kapitole se diplomová práce zaměřuje právě na možnost prolomení typů CAPTCHA využívají zkreslování textu v obraze.
 
 \begin{figure}[H]
   \centering
@@ -175,7 +167,7 @@ Stále běžně se vyskytujícím typem CAPTCHA zabezpečení je přepis textu z
 
 
 \subsubsection*{Identifikace objektů v obraze}
-Uživatelsky komfortnějším přístupem, jak rozlišit člověka od počítače, je zobrazit uživateli množinu různých obrázků a požadovat výběr pouze těch, které obsahují nějaký předmět. Zaměříme-li se na technologii Google reCaptcha [odkaz], lze pozorovat dva přístupy k tomuto problému. První variantou je zobrazit uživateli 9 obrázků, ze kterých je například vyžadován výběr pouze těch obsahujíce dopravní značky. Druhý přístup je segmentace obrazu do několika částí a vyžadování výběru pouze těch, které obsahují určitý objekt (například auto). Využití využití podobného přístupu se také využívá k monetizaci obsahu majitelů webů, jelikož existují technologie [odkaz] používající CAPTCHA jako inzertní plochu. 
+Uživatelsky komfortnějším přístupem, jak rozlišit člověka od počítače, je zobrazit uživateli množinu různých obrázků a požadovat výběr pouze těch, které obsahují nějaký předmět. Zaměříme-li se na technologii Google reCaptcha \footnote{\url{https://www.google.com/recaptcha/}}, lze pozorovat dva přístupy k tomuto problému. První variantou je zobrazit uživateli 9 obrázků, ze kterých je například vyžadován výběr pouze těch obsahujíce dopravní značky. Druhý přístup je segmentace obrazu do několika částí a vyžadování výběru pouze těch, které obsahují určitý objekt (například auto). Využití podobného přístupu se také využívá k monetizaci obsahu majitelů webů, jelikož existují technologie používající CAPTCHA jako inzertní plochu\footnote{\url{http://confidentcaptcha.com/}}, respektive poskytují nástroj na kategorizaci velkých datasetů uživateli \footnote{\url{https://hcaptcha.com/}}. 
 
 \begin{figure}[H]
 \centering
@@ -194,19 +186,9 @@ Uživatelsky komfortnějším přístupem, jak rozlišit člověka od počítač
 \label{fig:image_selection}
 \end{figure}
 
-\subsubsection*{Skládání puzzle}
-Další variantou CAPTCHA technologie pracující s obrazem nazvěme skládáním puzzle (společnost \textit{GeeTest} \ref{fig:captcha_geetest} používá anglický název \uv{slide}). Přístup spočívá spočívá v přesunu části obrazu ve tvaru dílku puzzle zpět na své původní místo pomocí posuvníku. Během procesu ověření je sledováno několik faktorů ovlivňujících vyhodnocovací proces, například doba posuvu, cesta myši, doplňky webového prohlížeče. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.7]{images/geetest.png}
-  \caption{Varianta GeeTest Slide používaná na webu \url{binance.com}}
-  \label{fig:captcha_geetest}
-\end{figure}
-
 \subsubsection*{noCAPTCHA}
 Ve snaze snížit interakci s uživatelem na minimum a tím i zvýšit komfort užívání webových stránek byly vyvinuty tzv. \textit{noCAPTCHA} typy. 
-Příkladem takového přístupu budiž \textit{No CAPTCHA reCAPTCHA} či \textit{GeeTest Click}, kdy je po návštěvníkovi vyžadován pouze klik na tlačítko. Stejně jako u předchozího typu dochází k vyhodnocování údajů o uživateli (cesta myši, doba kliku, ...) a v případě nedostatečné jistoty je zobrazena složitější výzva.
+Ukázkou takového přístupu je \textit{No CAPTCHA reCAPTCHA} či \textit{GeeTest Click}. V případě zmíněných typů musí návštěvník pouze kliknout na tlačítko. Veškerá verifikace uživatele je poté provedena na pozadí s využitím analýzy různých příznaků -- cesta myši, doba kliku, otisk prohlížeče, atd. V případě nedostatečné jistoty je zobrazena složitější výzva.
 
 \begin{figure}[H]
 \centering
@@ -226,21 +208,31 @@ Příkladem takového přístupu budiž \textit{No CAPTCHA reCAPTCHA} či \texti
 \label{fig:test}
 \end{figure}
 
+\subsubsection*{Skládání puzzle}
+Další variantou CAPTCHA technologie pracující s obrazem nazvěme skládáním puzzle (společnost \textit{GeeTest} \ref{fig:captcha_geetest} používá anglický název \uv{slide}). Přístup spočívá v~přesunu části obrazu ve tvaru dílku puzzle zpět na své původní místo pomocí posuvníku. Během procesu ověření je sledováno několik faktorů ovlivňujících vyhodnocovací proces, stejně jako v předchozím uvedeném typu.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{images/geetest.png}
+  \caption{Varianta GeeTest Slide používaná na webu \url{binance.com}}
+  \label{fig:captcha_geetest}
+\end{figure}
+
 \subsubsection*{Audio CAPTCHA}
-Zabezpečení pomocí textové/obrazové kontrol má nevýhodu v obtížném vyplňováním osobami se zrakovým postižením. Právě proto je vhodné takovým uživatelům nabídnout alternativní možnost (ikonu obecně užívanou pro audio lze nalézt v \ref{fig:captcha_text_image} nebo \ref{fig:recaptcha_selection} ) ověření, aby mohli využívat chráněné služby. často se tomu děje pomocí tzv. audio CAPTCHA, kdy jsou v nahrávce zakódovány znaky abecedy a uživatel je vyzván k jejich přepisu. V audionahrávkách lze nalézt jisté metody zkreslující zvuk, aby bylo možné předejít automatizovanému zpracování.
+Zabezpečení pomocí textové/obrazové kontroly má nevýhodu v obtížném vyplňováním osobami se zrakovým postižením. Právě proto je vhodné takovým uživatelům nabídnout alternativní možnost (ikonu obecně užívanou pro audio lze nalézt v \ref{fig:captcha_text_image} nebo \ref{fig:recaptcha_selection} ) ověření, aby mohli využívat chráněné služby. Často se tomu děje pomocí tzv. audio CAPTCHA, kdy jsou v nahrávce zakódovány znaky abecedy a uživatel je vyzván k jejich přepisu. V audionahrávkách lze nalézt jisté metody zkreslující zvuk, aby bylo možné předejít automatizovanému zpracování.
 
 \subsection{Možnosti prolamování}
 \subsubsection*{Nalezení chyby v implementaci}
-Triviálním způsobem prolomení CAPTCHA kódů je využít chyby v implementaci generování výzev. Uživatel, který si řiká Ak1T4, popisuje \cite{web:akita} vložení zahashované hodnoty odpovědi do formuláře spolu s typem obrázkové CAPTCHA. Využitím vhodných nástrojů a rainbow tabulek (tabulka obsahující dva sloupce - plain text a příslušnou hash) je možné s odpovídajícím HW nalézt rychle správnou odpověď.
+Triviálním způsobem prolomení CAPTCHA kódů je využít chyby v implementaci generování výzev. Uživatel, který si řiká Ak1T4, popisuje \footnote{\url{https://medium.com/bugbountywriteup/bypassing-captcha-like-a-boss-d0edcc3a1c1}} vložení zahashované hodnoty odpovědi do formuláře spolu s typem obrázkové CAPTCHA. Využitím vhodných nástrojů a rainbow tabulek (tabulka obsahující dva sloupce - plain text a příslušnou hash) je možné s odpovídajícím hardware nalézt rychle správnou odpověď.
 
 \subsubsection*{Outsourcing rozpoznání}
-Stále používanou variantou automatického rozpoznávání CAPTCHA kódů je pronájem služeb třetích stran\footnote{\url{https://anti-captcha.com}}\footnote{\url{https://2captcha.com}}. Jde o webové služby, které typicky prostřednictvím svého API nabízejí placejícím zákazníkům rozpoznání reálným pracovníkem. Výhodou rozpoznání člověkem je adaptace na možné změny v typu zabez\-pe\-čení zaručující zachování míry úspěšnosti. Avšak morálně pochybným faktem je, že tyto služby využívají pracovníky z rozvojových zemí (například Venezuely, Indonésie, Vietnamu, ...), kteří jsou ohodnoceni velmi nízkou mzdou (hodinová sazba se uvádí v rozpětí 0.2 USD až 0.8 USD). 
+Stále používanou variantou automatického rozpoznávání CAPTCHA kódů je~pro\-nájem služeb třetích stran\footnote{\url{https://anti-captcha.com}}$^{,}$\footnote{\url{https://2captcha.com}}. Jde o webové služby, které typicky prostřednictvím svého API nabízejí placejícím zákazníkům rozpoznání reálným pracovníkem. Výhodou rozpoznání člověkem je adaptace na možné změny v typu zabez\-pe\-čení zaručující zachování míry úspěšnosti. Avšak morálně pochybným faktem je, že tyto služby využívají pracovníky z rozvojových zemí (například Venezuely, Indonésie, Vietnamu, ...), kteří jsou ohodnoceni velmi nízkou mzdou (hodinová sazba se uvádí v rozpětí 0.2 USD až 0.8 USD). 
 
 \subsubsection*{Strojové učení}
-V závěru se dostáváme k metodám, které jsou z informatického pohledu zajímavé. Díky pokroku oboru strojového učení a kvalitě softwaru umožňujícího s technikami oboru pracovat je možné nechat vykonat práci rozpoznání CAPTCHA, kterou prováděl v předchozím odstavci lidský pracovník, strojem. Techniky se zejména liší v přístupu, jaké druhy kódů lze rozpoznávat. Zatímco \cite{43464} se snaží o vytvoření univerzálního algoritmu pokrývajícího co největší množství CAPTCHA kódů, \citep{Kopp2016HowTM} naopak přistupuje k problému minimalisticky a jednoduchou metodou rozpoznává konkrétní typy kódů.
+V závěru se dostáváme k metodám, které jsou z informatického pohledu zajímavé. Díky pokroku oboru strojového učení a kvalitě softwaru umožňujícího s technikami oboru pracovat je možné nechat vykonat práci rozpoznání CAPTCHA, kterou prováděl v předchozím odstavci lidský pracovník, strojem. Techniky se~zejména liší v přístupu, jaké druhy kódů lze rozpoznávat. Zatímco \cite{43464} se snaží o~vytvoření univerzálního algoritmu prolamujícího co největší množství různých CAPTCHA kódů, \citep{Kopp2016HowTM} naopak přistupuje k problému minimalisticky a jednoduchou metodou rozpoznává konkrétní typy kódů.
 \newpage
 \section{Captcha Breaker}
-Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA zabezpečení také demonstrace možnosti jeho prolamování. Jako vhodný typ se jeví rozpoznání zkresleného textu v obraze. Jelikož hlavní inspirace pocházela z \cite{Kopp2016HowTM}, některé typy CAPTCHA vybrané k prolomení byly shodné, aby bylo možné porovnat úspěšnost odlišných postupů rozpoznání extrahovaných symbolů. Aplikace demonstruje prolamování na typech CAPTCHA vyskytujících se na webech:
+Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA zabezpečení také demonstrace možnosti jeho prolamování. Jako vhodný typ se jeví rozpoznání zkresleného textu v obraze. Jelikož hlavní inspirace pocházela z \cite{Kopp2016HowTM}, některé typy CAPTCHA vybrané k prolomení byly zvoleny shodné, aby bylo možné porovnat úspěšnost odlišných postupů rozpoznání extrahovaných symbolů. Aplikace demonstruje prolamování na typech CAPTCHA vyskytujících se na webech:
 \begin{description}[align=left]
 \item [adiseet.mfcr.cz] Daňový portál Finanční správy České republiky.
 \begin{figure}[H]
@@ -252,7 +244,7 @@ Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA za
 \begin{figure}[H]
   \centering
   \includegraphics{images/kamody.jpg}
-\end{figure}1
+\end{figure}
 
 \item [mojedatovaschranka.cz] Portál určený pro elektronickou komunikaci s úřady.\footnote{V průběhu tvorby diplomové práce došlo k zásadní aktualizaci webové aplikace \url{https://mojedatovaschranka.cz} a původní CAPTCHA zabezpečení bylo nahrazeno technologií Google reCAPTCHA.}
 \begin{figure}[H]
@@ -274,44 +266,45 @@ Cílem diplomové práce je kromě stručného úvodu do problematiky CAPTCHA za
 \end{description}
 
 
-Jelikož je uživatelská příprava datasetu poměrně náročný úkol, kromě zmíněného algoritmu byla vytvořena webová aplikace, která umožňuje spustit průvodce tvorby datasetu nebo klasifikátoru. Zároveň je na stejném webu možné zkusit rozluštit známé typy CAPTCHA schéma. 
+Jelikož je uživatelská příprava datasetu poměrně náročný úkol, kromě zmíně\-ného algoritmu byla vytvořena webová aplikace, která umožňuje spustit průvodce tvorby datasetu nebo klasifikátoru. Zároveň je na stejném webu možné zkusit rozluštit známé typy CAPTCHA schéma. 
 
 \subsection{Použité technologie}
 \subsubsection*{Python}
-Populární interpretovaný jazyk podporující různá programovací paradigmata. Jde  se o jeden z nejpopulárnějších jazyků dnešní doby \footnote{\url{https://insights.stackoverflow.com/survey/2019}}, zároveň v oblasti strojového učení poskytuje všechny potřebné knihovny. Nevýhodou jazyka je obtížnost paralelního zpracování dat, což je řešeno knihovnami třetích stran.
+Populární interpretovaný jazyk podporující různá programovací paradigmata. V současnosti se řadí mezi 
+nejpopulárnější programovací jazyky \footnote{\url{https://insights.stackoverflow.com/survey/2019}}, zároveň v oblasti strojového učení poskytuje všechny potřebné knihovny. Nevýhodou jazyka je obtížnost paralelního zpracování dat, což je řešeno knihovnami třetích stran.
 
 \subsubsection*{Flask}
-Flask je microframework určený pro tvorbu webových aplikací napsaný v jazyce Python. Samotné jádro frameworku v základu obsahuje s nadsázkou pouze nástroje pro směrování požadavků a šablonovací systém Jinja. Vyžadujeme-li funkcionalitu navíc (jako například práci s DB, ORM mapování, validaci formulářů nebo autentizaci požadavků), je nutné doinstalovat patřičný modul. Framework se tedy snaží být minimalistický a je pouze na uvážení vývojáře, jaké moduly k jádru frameworku dodá. 
+Flask je microframework určený pro tvorbu webových aplikací napsaný v jazyce Python. Samotné jádro frameworku v základu obsahuje s nadsázkou pouze ná\-stroje pro směrování požadavků a šablonovací systém Jinja. Vyžadujeme-li funk\-cio\-nalitu navíc (například komunikaci s DB, ORM mapování, validaci formulářů nebo autentizaci požadavků), je nutné doinstalovat patřičný modul. Framework se tedy snaží být minimalistický a je pouze na uvážení vývojáře, jaké moduly k~jádru frameworku dodá. 
 \subsubsection*{PostgreSQL}
 Pro perzistentní uložení informací bylo nutné zvolit některý z relačních databázových systémů. V aplikace bylo zvoleno PostgreSQL, zejména kvůli jeho popularitě a podpoře JSON datového typu. 
 \subsubsection*{Celery}
-Důležitým vlastností pro některé aplikace je možnost vykonávat některé operace asynchronně. K tomu lze v případě Flasku, respektive Pythonu obecně použít například Celery. Jedná se distribuovaný systém sloužící pro zpracování zasílaných zpráv, které předávány skrze nějakého z podporovaných prostředníků, tzv. brokerů. I když primárně míří na zpracování v reálném čase, podporuje například zařazení obdržených zpráv do fronty a jejich sekvenční zpracování.
+Důležitým požadavkem pro některé aplikace je možnost vykonávat některé ope\-race asynchronně. K tomu lze v případě Flasku, respektive Pythonu obecně, použít knihovnu Celery. Jedná se distribuovaný systém sloužící pro zpracování zasílaných zpráv, které předávány skrze nějakého z podporovaných prostředníků, tzv. brokerů. I když primárně míří na zpracování v reálném čase, podporuje například zařazení obdržených zpráv do fronty a jejich sekvenční zpracování.
 
-Knihovna umožňuje spustit libovolnou Python metodu jako úlohu v separátním vlákně, je-li obalena dekorátorem \texttt{@celery.task}. V aplikace je takové chování využito k předání informací o klasifikátoru, který je potřeba natrénovat.
+Knihovna umožňuje spustit libovolnou Python metodu jako úlohu v separátním vlákně, je-li obalena tzv. dekorátorem \texttt{@celery.task}. V aplikace je takové chování využito k předání informací o klasifikátoru, který je potřeba natrénovat.
 
 \subsubsection*{RabbitMQ}
 Jako broker pro komunikaci s Celery byl použit RabbitMQ. Jedná se o úložiště pracující primárně v operační paměti, nicméně lze jej nakonfigurovat tak, aby ukládal data na pevný disk a po restartu zařízení byl schopen obnovit svůj stav.
 
 \subsubsection*{PyTorch}
-Open-source knihovna zaměřená na strojové učení v jazyce Python. Byť se jedná o volbu méně populární než například TensorFlow \footnote{\url{https://towardsdatascience.com/deep-learning-framework-power-scores-2018-23607ddf297a}}, pro potřeby vyvinuté aplikace je plně dostačující.
+Open-source knihovna zaměřená na strojové učení v jazyce Python. Byť se jedná o volbu méně populární než například TensorFlow\footnote{\url{https://towardsdatascience.com/deep-learning-framework-power-scores-2018-23607ddf297a}}, pro potřeby vyvinuté aplikace je plně dostačující.
 
 
 \subsubsection*{jQuery}
-jQuery je již několik let nejpoužívanější javascriptovou knihovnou \footnote{\url{https://w3techs.com/technologies/overview/javascript\_library/all}} vůbec. Mezi její silné stránky patří snadná manipulace s DOM nebo obsluha AJAX requestů. Těchto vlastností využívá zejména průvodce tvorbou datasetu v administrační části aplikace.
+jQuery je již několik let nejpoužívanější javascriptovou knihovnou\footnote{\url{https://w3techs.com/technologies/overview/javascript\_library/all}} vůbec. Mezi její silné stránky patří snadná manipulace s DOM nebo obsluha AJAX requestů. Těchto vlastností využívá zejména průvodce tvorbou datasetu v administrační části aplikace.
 
 \subsubsection*{Bootstrap}
 Spolu s jQuery tvoří CSS knihovna Bootstrap základ velkého množství webů. Programátor je s jejím použítím odstíněn od nutnosti stylovat prvky webové stránky a je možné se více soustředit na samotný vývoj backendu.
 
 \subsection{Uživatelská část}
-Část aplikace dostupná neautorizovanému uživateli obsahuje výčet známých typů CAPTCHA kódů, které je možné prolomit spolu s formulářem pro nahrání uživatelova obrázku. Po výběru obrázku k prolomení a příslušného klasifikátoru je možné zaslat dotaz na server, který z obrázku dekóduje znaky pomocí vybraného klasifikátoru, což je řešeno asynchronním dotazem na backend aplikace. Nastane-li chyba, je uživateli zobrazena příslušná hláška. V případě úspěšného rozpoznání pouze obsah zaslaného obrázku.
+Část aplikace dostupná neautorizovanému uživateli obsahuje výčet známých typů CAPTCHA kódů, které je možné prolomit spolu s formulářem pro nahrání uživatelova obrázku. Po výběru obrázku k prolomení a příslušného klasifikátoru je možné zaslat dotaz na server, který z obrázku dekóduje znaky pomocí vybraného klasifikátoru, což je řešeno asynchronním dotazem na backend aplikace. Nastane-li chyba, je uživateli zobrazena příslušná hláška. V případě úspěšného rozpoznání pouze obsah dekódovaný ze zaslaného obrázku.
 
-Zaslaný dotaz obsahuje pouze dva parametry - ID klasifikátoru a obrázek zakódovaný do Base64. Jakmile server obdrží požadavek, nejprve zkontroluje existenci klasifikátoru. Pokud přijal špatnou hodnotu, informuje o takové situaci uživatele chybovou odpovědí. Následně jsou z vstupního obrázku extrahovány jednotlivé symboly dle konfigurace datasetu zvoleného klasifikátoru. V posledním kroku jsou extrahované symboly předány klasifikátoru k rozpoznání. V odpovědi je poté předána dekódovaná hodnota.
+Zasílaní dotaz na server obsahuje pouze dva parametry - ID klasifikátoru a~obrázek zakódovaný do Base64. Jakmile server obdrží požadavek, nejprve zkontroluje existenci klasifikátoru. Pokud přijal špatnou hodnotu, informuje o takové situaci uživatele chybovou odpovědí. Následně jsou z vstupního obrázku extrahovány jednotlivé symboly dle konfigurace datasetu zvoleného klasifikátoru. V~posledním kroku jsou extrahované symboly předány klasifikátoru k rozpoznání. V odpovědi je poté předána dekódovaná hodnota.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.6]{images/website_public.png}
   \caption{Rozpoznaný kód.}
-  \label{fig:captcha_geetest}
+  \label{fig:resolved}
 \end{figure}
 
 \begin{minipage}{0.45\textwidth}
@@ -353,10 +346,10 @@ Odpověď v případě rozpoznání znaků
 \end{table}
 
 \subsection{Administrační rozhraní}
-Část webu dostupná pouze administrátorovi je dostupná na URL \texttt{/dasboard}. Všechny dotazy přicházející na adresy v tomto jmenném prostoru musejí být autentizovány. Jelikož jde pouze o demonstrativní webovou aplikaci, není zde řešen přístup více uživateli, případně různé víceúrovňové kontroly přístupu. Přihlašovací údaje jsou kontrolovány vůči konstantám \texttt{APP\_USERNAME}, respektive \texttt{APP\_PASSWORD} v konfiguračním souboru aplikace. Bezpečnost takového přístupu lze dále zvýšit například restrikcí IP adres u dotazů přicházející na chráněné endpointy v konfiguraci použitého aplikačního serveru.
+Část webu dostupná pouze administrátorovi je dostupná na URL \texttt{/dashboard}. Všechny dotazy přicházející na adresy v tomto jmenném prostoru musejí být autentizovány. Jelikož jde pouze o demonstrativní webovou aplikaci, není zde řešen přístup několika autorizovanými uživateli, případně různé víceúrovňové kontroly přístupu. Přihlašovací údaje jsou kontrolovány vůči konstantám \texttt{APP\_USERNAME}, respektive \texttt{APP\_PASSWORD} v konfiguračním souboru aplikace. Bezpečnost ta\-ko\-vého přístupu lze dále zvýšit například restrikcí IP adres u dotazů přicházející na chráněné endpointy v konfiguraci použitého aplikačního serveru.
 
 \subsubsection*{Nástěnka \texttt{/dashboard/overview/}}
- Na nástěnce jsou zobrazeny statistiky příchozích dotazů na rozpoznání CAPT\-CHA obrázků a počtu datasetů, resp. klasifikátorů. Existují-li navíc klasifikátory, které se momentálně trénují, jsou na nástěnce zobrazeny informace o stavu procesu. Kromě názvu klasifikátoru je zobrazeno pořadí aktuální iterace, respektive informace o fázi verifikace. Data o trénovaných klasifikátorech jsou pravidelně aktualizována v intervalu 5 vteřin pomocí AJAX dotazů. Po natrénování klasifikátoru je informace i něm z nástěnky odstraněna.
+ Na nástěnce jsou zobrazeny statistiky příchozích dotazů na rozpoznání obsahu CAPTCHA obrázků a počtu datasetů, resp. klasifikátorů. Existují-li navíc klasifikátory, které se momentálně trénují, jsou na nástěnce zobrazeny informace o stavu procesu. Kromě názvu klasifikátoru je zobrazeno pořadí aktuální iterace, respektive informace o fázi verifikace. Data o trénovaných klasifikátorech jsou pravidelně aktualizována v intervalu 5 vteřin pomocí AJAX dotazů. Po natrénování klasifikátoru je informace i něm z nástěnky odstraněna.
 
 \subsubsection*{Nahrání datasetu \texttt{/dashboard/datasets/new/}}
 Proces nahrání datasetu je zahrnut v jednoduchém průvodci. Administrátor je nejprve vyzván k vybrání ZIP archivu se vzorovými CAPTCHA obrázky. Následně je mu umožněno přiřadit jednotlivým obrázkům texty, které jsou v nich obsaženy. V případě vynechání tohoto kroku se význam textů určuje podle názvu souborů. V posledním kroku je konfigurace grafických operací \ref{fig:dataset_new}, které zkonvertují vstupní obraz do podoby vhodné pro extrahování symbolů. Jakmile je administrátor spokojený s výsledkem, odešle dataset na server a je přesměrován na stránku s jeho detaily.
@@ -369,17 +362,17 @@ Proces nahrání datasetu je zahrnut v jednoduchém průvodci. Administrátor je
 \end{figure}
 
 \subsubsection*{Zobrazení datasetu \texttt{/dashboard/datasets/:id/}}
-Jakmile je dataset nahrán na server, je administrátor přesměrován na stránku s jeho detaily. V horní části stránky jsou zobrazeny informace o času vytvoření, obsažených znacích a celkovém počet rozpoznaných symbolů. Následuje výpis nahraných obrázků spolu se zobrazením extrahovaných symbolů. V poslední části je vypsána konfigurace extrakce ve formátu JSON. 
+Stručný přehled s informacemi o vytvořeném datasetu. V horní části stránky jsou zobrazeny informace o času vytvoření, obsažených znacích a celkovém počet rozpoznaných symbolů. Následuje výpis nahraných obrázků spolu se zobrazením extrahovaných symbolů. V poslední části je vypsána konfigurace extrakce ve formátu JSON. 
 
 \subsubsection*{Tvorba klasifikátoru \texttt{/dashboard/classificators/new/}}
 Formulář konfigurace klasifikátoru je parametrizován šesti vstupy - názvem klasifikátoru, zdrojovým datasetem, maximálním počtem iterací, velikostí \textit{learning rate}, velikostí \textit{momentum} a případým nastavením křížové validace. Po odeslání požadavku na vytvoření klasifikátoru je samotná fáze trénování spuštěna v asynchronním procesu na pozadí a administrátor je přesměrován na nástěnku, kde vidí průběžně aktualizované informace o trénování klasifikátoru.
 
 \subsubsection*{Detaily klasifikátoru \texttt{/dashboard/classificators/:id/}}
-Stránka zobrazuje detaily konfigurace klasifikátoru spolu s informacemi o hodnotě ztrátové funkce z jednotlivých iterací trénování neuronové sítě. Požadoval-li administrátor také spuštění křížové validace, jsou vypsány úspěšnosti každé iterace validace.
+Stránka zobrazuje detaily konfigurace klasifikátoru spolu s informacemi o hodnotě ztrátové funkce z jednotlivých iterací trénování neuronové sítě. Požadoval-li administrátor také spuštění křížové validace, jsou vypsány úspěšnosti každé ite\-race validace.
 
 
 \subsection{Podporované grafické operace}
-Aplikace momentálně podporuje několik grafických operací, které slouží k pří\-pravě obrazu ze kterého jsou extrahovány jednotlivé symboly. Jejich použití je nutné vzhledem k možnému použití metod, které zkreslují znaky zanesené do obrazu. Architektura aplikace je navržena tak, že jsou jednotlivé třídy grafických operací automaticky převoditelné do HTML kódu včetně svých argumentů. Zároveň implementují vlastní (de)se\-riali\-zaci, což umožňuje snadnou rozšiřitelnost webového průvodce tvorbou data\-setu.
+Aplikace momentálně podporuje několik grafických operací, které slouží k pří\-pravě obrazu, ze kterého jsou extrahovány jednotlivé symboly. Jejich použití je nutné vzhledem k možnému použití metod, které zkreslují znaky zanesené do~obrazu. Architektura aplikace je navržena tak, že jsou jednotlivé třídy grafických operací automaticky převoditelné do HTML kódu včetně svých argumentů. Zároveň implementují vlastní (de)se\-riali\-zaci, což umožňuje snadnou rozšiřitelnost webového průvodce tvorbou data\-setu.
 \subsubsection*{Stupně šedi (Grayscale)}
 Operace převádějící obraz z RGB spektra do stupňů šedi.
 \begin{figure}[H]
@@ -392,12 +385,12 @@ Operace převádějící obraz z RGB spektra do stupňů šedi.
   \centering
   \includegraphics[width=.8\linewidth]{images/grayscale_result.png}
 \end{subfigure}
-\caption{Vlevo původní obrázek, vpravo po transformaci do stupňů šedi.}
+\caption{Vlevo původní obrázek, vpravo po černobílá verze po transformaci.}
 \label{fig:crop_example}
 \end{figure}
 
 \subsubsection*{Oříznutí (Crop)}
-V některých případech obsahuje vstupní obraz rámeček, který bez odstranění způsobuje selhání algoritmu nalezení největších ploch. Z toho důvodu byla přidána možnost oříznout vstupní obraz rovnoměrně ze všech stran.
+V některých případech obsahuje vstupní obraz rámeček, který bez odstranění způsobuje selhání algoritmu nalezení největších ploch. Z toho důvodu byla při\-dána možnost oříznout vstupní obraz rovnoměrně ze všech stran.
 
 \begin{table}[H]
 \centering
@@ -426,7 +419,7 @@ size & \texttt{Integer} & velikost ořezu
 \end{figure}
 
 \subsubsection*{Otsovo prahování (Otsu's treshold)}
-Otsovo prahování se používá k automatickému převodu obrazu z odstínů šedi do binární černobílé podoby. Interně Otsovo prahování analyzuje histogram vstupního obrazu, dle kterého určuje následné rozdělení na popředí/pozadí obrazu. 
+Otsovo prahování se používá k automatickému převodu obrazu z odstínů šedi do~binární černobílé podoby. Interně Otsovo prahování analyzuje histogram vstupního obrazu, dle kterého určuje následné rozdělení na popředí/pozadí obrazu. 
 
 
 \begin{figure}[H]
@@ -444,7 +437,7 @@ Otsovo prahování se používá k automatickému převodu obrazu z odstínů š
 \end{figure}
 
 \subsubsection*{Inverze (Inverse)}
-Inverze v aplikaci slouží k záměně popředí/pozadí obrazu. V některých případech užití Otsova prahování totiž dojde k jevu, kdy je část obrazu která je hledaná v segmentačním algoritmu označena jako pozadí. Jelikož je na vstupu očekávaný binární obraz, operace je implementována jako bitová negace.
+Inverze v aplikaci slouží k záměně popředí/pozadí obrazu. V některých případech užití Otsova prahování totiž dojde k jevu, kdy je část obrazu, která je hledaná v~segmentačním algoritmu, označena jako pozadí. Jelikož je na vstupu očekávaný binární obraz, operace je implementována jako bitová negace.
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
@@ -492,7 +485,7 @@ upper\_bound & \texttt{Integer} & horní hranice hodnot popředí
 \end{figure}
 
 \subsubsection*{Odstranění spojitých ploch (Area Filter)}
-Jedná se o pomocnou operaci jejímž cílem je komfortnější práce s průvodcem tvorby datasetu. Operace odstraní plochy obrazu, které mají svou plochu menší než je uživatelem definovaná velikost, případně je jejich výška menší než definované velikost. Důsledkem je odfiltrování šumu z obrazu bez nutnosti použití morfologických operací, které by mohly s příliš vysokými argumenty nevhodně poškodit obraz.
+Jedná se o pomocnou operaci jejímž účelem je komfortnější obsluha průvodce tvorby datasetu. Operace odstraní plochy obrazu, které mají svou plochu menší než je uživatelem definovaná velikost, případně je jejich výška menší než definované velikost. Důsledkem je odfiltrování šumu z obrazu bez nutnosti použití morfologických operací, které by mohly s příliš vysokými argumenty nevhodně poškodit obraz.
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
@@ -507,7 +500,7 @@ Jedná se o pomocnou operaci jejímž cílem je komfortnější práce s průvod
 \label{fig:inverse_example}
 \end{figure}
 \subsubsection*{Morfologické transformace}
-Před samotným výčtem morfologických operací je vhodné zmínit, o jaký proces se jedná. Morfologická operace očekává na vstupu dva argumenty -- obrázek a strukturální element (také nazývaný jádro). Pro zjednodušení uvažujme pouze binární obrázky, ačkoliv lze operace zobecnit také na barevné. Jádro i obrázek lze vyjádřit jako matice (v aplikaci je vždy použita čtvercová matice) s hodnotami z množiny $ {0, 1} $. Jádro je posouváno nad jednotlivými pixely vstupního obrázku, jejíž hodnotu mění dle dále popsaných vlastností. Samotné jádro může mít tvar 
+Před samotným výčtem morfologických operací je vhodné zmínit, o jaký proces se jedná. Morfologická operace očekává na vstupu dva argumenty -- obrázek a~strukturální element (také nazývaný jádro). Pro zjednodušení uvažujme pouze binární obrázky, ačkoliv lze operace zobecnit také na barevné. Jádro i obrázek lze vyjádřit jako matice (v aplikaci je vždy použita čtvercová matice) s hodnotami z množiny $ {0, 1} $. Jádro je posouváno nad jednotlivými pixely vstupního obrázku, jejíž hodnotu mění dle dále popsaných vlastností. Samotné jádro může mít tvar 
 \begin{enumerate*}[label={\alph*)}]
 \item kříž
 \item kruh nebo
@@ -622,7 +615,7 @@ Dilatace následovaná erozí. Nejprve jsou okraje obrazu rozšířeny a zaplně
 \label{fig:inverse_example}
 \end{figure}
 
-\subsubsection*{Morfologické otevření (Morphological otevření)}
+\subsubsection*{Morfologické otevření (Morphological opening)}
 V posledním případě jde o erozi následovanou dilatací. Po odfiltrování šumu a vyhlazení hran okraje obrazu dilatují do původních hodnot.
 \begin{figure}[H]
 \centering
@@ -655,31 +648,26 @@ scale\_ratio & \texttt{Integer} & koeficient škálování
 
 
 \subsection{Extrakce symbolů}
-Extrakce symbolů se provádí nad obrázky z uživatelem nahraného datasetu v podobě ZIP archivu. Podporovány jsou všechny obrazové formáty, které podporuje knihovna OpenCV. Ke spuštění extrakce je také potřeba informace o počtu hledaných symbolů v obraze a konfigurace zpracování obrazu. Volitelně je nahrán také slovník přiřazující jednotlivým souborům význam symbolů v nich uložených. Výsledkem jsou extrahované jednotlivé znaky do unifikovaného rozměru  $20\times20$ pixelů, které se následně ukládají do databáze.
+Extrakce symbolů se provádí nad obrázky z uživatelem nahraného datasetu v~podobě ZIP archivu. Podporovány jsou všechny obrazové formáty, které podporuje knihovna OpenCV. Ke spuštění extrakce je také potřeba informace o~počtu hledaných symbolů v obraze a konfigurace zpracování obrazu. Volitelně je na\-hrán také slovník přiřazující jednotlivým souborům význam symbolů v nich uložených. Výsledkem jsou extrahované jednotlivé znaky do unifikovaného rozměru  $20\times20$ pixelů, které se následně ukládají do databáze.
 
 \subsubsection*{Možné kolize}
 Během procesu extrakce symbolů jsou v obraze hledány spojité plochy pixelů, které mohou představovat symbol CAPTCHA kódu. Ne vždy je však ihned nalezeno požadované množství takových oblastí. 
 \begin{itemize}
-\item \textbf{Byl nalezen velký počet spojitých ploch.} Proces předzpracování obrazu nemusí v některých případech vyčistit obraz v žádoucí kvalitě a proto může být nalezeno více ploch, spojitých ploch obrazu, které lze považovat za symbol. V takovém případě se pro každou takovou oblast vypočítá její velikost a zachová se použe $n$ největších, kde $n$ značí počet hledaných symbolů.
+\item \textbf{Byl nalezen velký počet spojitých ploch.} Proces předzpracování ob\-razu nemusí v některých případech vyčistit obraz v žádoucí kvalitě a proto může být nalezeno více ploch, spojitých ploch obrazu, které lze považovat za symbol. V takovém případě se pro každou takovou oblast vypočítá její velikost a zachová se použe $n$ největších, kde $n$ značí počet hledaných symbolů.
 
-\item \textbf{Byl nalezen malý počet spojitých ploch.} V některé CAPTCHA obrázky mohou být natolik deformovány, že se symboly v nich obsažené navzájem prolínají. Takovou vadu lze například odstranit spočítáním tzv. lokálních minim v jednotlivých spojitých plochách. Každé takové lokální minimum se označí hodnotou určující rovnoměrnost rozdělení obsaženého symbolu. Dokud není určeno $n$ oblastí obsahující symbol, vybere se a rozdělí taková spojitá plocha, jejíž ohodnocení rozdělení je maximální.
+\item \textbf{Byl nalezen malý počet spojitých ploch.} Některé CAPTCHA obrázky mohou být natolik deformovány, že se symboly v nich obsažené navzájem prolínají. Takovou vadu lze například odstranit spočítáním tzv. lokálních minim v jednotlivých spojitých plochách. Každé takové lokální minimum se označí hodnotou určující rovnoměrnost rozdělení obsaženého symbolu. Dokud není určeno $n$ oblastí obsahující symbol, vybere se a rozdělí taková spojitá plocha, jejíž ohodnocení rozdělení je maximální.
 \end{itemize}
 
 
 \subsection{Tvorba klasifikátoru}
-Klasifikátorem se rozumí algoritmus, jehož účelem je přiřadit vstupnímu prvku správnou kategorii na základě trénovacích dat, se kterými byl algoritmus trénován. Konkrétně v případě rozpoznání symbolů v navrženém algoritmu se jedná o přiřazení indexu v poli známých symbolů datasetu. Klasifikátor může být implementován různými způsoby, práce používá konvoluční neuronovou síť.
+Klasifikátorem se rozumí algoritmus, jehož účelem je přiřadit vstupnímu prvku správnou kategorii na základě trénovacích dat, se kterými byl algoritmus trénován. Konkrétně v případě rozpoznání symbolů v navrženém algoritmu se jedná o~při\-řazení indexu v poli známých symbolů datasetu. Klasifikátor může být implementován různými způsoby, práce používá konvoluční neuronovou síť.
 
 \subsubsection*{Konvoluční neuronová síť}
-Architektura použité konvoluční neuronové sítě se skládá z 
-
-\begin{itemize}
-\item \textbf{momentum}
-\item \textbf{learning rate}
-\end{itemize}
-V této fázi máme extrahovány jednotlivé symboly z CAPTCHA obrázků o normovaném rozměru $20\times20$ pixelů. V posled
+Architektura použité konvoluční neuronové sítě se skládá ze dvou konvolučních vrstev.
+Jako optimalizátor je použit algoritmus SGD, který je parametrizovatelný argumenty \textit{learning rate} a \textit{momentum}. Jelikož mají oba dva vliv na přesnost výsledků a rychlost trénování klasifikátoru, je možné je parametrizovat k konfiguraci klasifikátoru.
 
 \subsection{Úspěšnost implementované metody prolamování}
-Pro ověření úspěšnosti navržené metody prolamování CAPTCHA kódů bylo z webů uvedených v úvodu kapitoly staženo a manuálně označeno 400 různých obrázků, ze kterých byly vytvořeny datasety. Následně se pro každý dataset vytvořil klasifikátor a provedla se křížová validace.  
+Pro ověření úspěšnosti navržené metody prolamování CAPTCHA kódů bylo z~webů uvedených v úvodu kapitoly staženo a manuálně označeno 400 různých obrázků, ze kterých byly vytvořeny datasety. Následně se pro každý dataset vytvořil klasifikátor a provedla se křížová validace.  
 
 \begin{table}[H]
 \centering
@@ -719,13 +707,13 @@ ulozto.cz & 0.14
 \label{succesful_rate_mimic}
 \end{table}
 
-Zároveň lze pozorovat význam aplikace zkreslujících křivek na popředí CAPT\-CHA typu použitého na webu \url{https://adiseet.mfcr.cz}. V porov\-nání s obrázky použitými na webu \url{https://mojedatovaschranka.cz}, kde je CAPTCHA typ až na umístění zkreslujících křivek shodný, dochází k poklesu úspěšnosti rozpoznání přibližně o  3 procenta.
+Zároveň lze pozorovat patrný význam aplikace zkreslujících křivek na popředí CAPT\-CHA typu použitého na webu \url{https://adiseet.mfcr.cz}. V porov\-nání s ob\-rázky použitými na webu \url{https://mojedatovaschranka.cz}, kde je CAPTCHA typ až na~umístění zkreslujících křivek shodný, dochází k poklesu úspěšnosti rozpoznání přibližně o  tři procenta.
 
 \subsection{Další vývoj}
 Ultimativní nástroj pro lámání CAPTCHA kódů, byť pouze obrázkových, nebyl vytvořen. Implementace následujících funkcionalit, zejména v administračním rozhraní, by výrazně zlepšila komfort užívání a zřejmě i praktičnost systému jako celku.
 
 \subsubsection*{Upozornění na chybně klasifikované znaky} 
-Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit chybně klasifikované obrázky. Taková chyba může nastat zejména v následujících třech případech: 
+Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit upozornění na možné chybně klasifikované symboly. Taková chyba může nastat zejména v následujících třech případech: 
 \begin{itemize}
 \item Příliš podobné znaky (číslice 0 versus písmeno O).
 \item Algoritmus pro extrakci symbolů na výstupu nevrátí celý znak, ale např. pouze jeho část.
@@ -733,16 +721,16 @@ Na stránce zobrazující detaily klasifikátoru se naskýtá možnost zobrazit 
 \end{itemize}
 
 \subsubsection*{Změna označení již nahraných obrázků} 
-Během procesu vytváření datasetu musí administrátor nahrát ZIP archiv obsahující obrázky jejichž název odpovídá CAPTCHA kódu, nebo je procesem označení obrázků proveden před uploadem na server. V obou případech však závisí jen a pouze na lidském faktoru, zda bude obrázku přiřazen správný nebo chybný text. Z toho důvodu je vhodné umožnit změnu označení obrázku, resp. samotného symbolu.
+Během procesu vytváření datasetu musí administrátor nahrát ZIP archiv obsahující obrázky jejichž název odpovídá CAPTCHA kódu, nebo je procesem označení obrázků proveden před uploadem na server. V obou případech však závisí jen a~pouze na lidském faktoru, zda bude obrázku přiřazen správný nebo chybný text. Z toho důvodu je vhodné umožnit změnu označení obrázku, resp. samotného symbolu.
 
 \subsubsection*{Odstranění některých znaků}
-Druhá chyba z prvního odstavce popisuje nesprávné rozpoznání symbolu v CAPTCHA obrázku. Tomu je možné předejít úpravou parametrů extraktoru, což však může mít za následek horší rozpoznávací schopnosti symbolů v datasetu jako celku. Abychom zamezili trénování klasifikátoru na chybných datech, je vhodnější poskytnout možnost odebrat jednotlivé symboly z datasetu, které byly špatně rozpoznány.
+V některých případech není možné segmentovat jednotlivé symboly z datasetu se stoprocentní úspěšností. Aby se trénovaná neuronová síť neučila na chybně označených datech, je vhodné umožnit odstranit z datasetu ty symboly, které byly špatně extrahovány.
 
 \subsubsection*{Volba z více klasifikátorů} 
-V současné době systém používá jako klasifikátor konvoluční neuronovou síť se dvěma konvolučními vrstvami. taková konfigurace nemusí vyhovovat všem rozpoznávaným typům CAPTCHA obrázků. Rovněž pro účely porovnání úspěšnosti různých klasifikátorů je rozumné přidat možnost volby. 
+V současné době systém používá jako klasifikátor konvoluční neuronovou síť. Takový klasifikátor nemusí vyhovovat všem rozpoznávaným typům CAPTCHA obrázků. Rovněž pro účely porovnání úspěšnosti různých klasifikátorů je rozumné přidat možnost volby. 
 
 \subsubsection*{Klasifikátor používající více datasetů} 
-K dalšímu zlepšení rozpoznávání by mohlo také vést trénování klasifikátoru znaky z více zdrojů. Kromě primárního datasetu, který udává i proces extrakce symbolů, by k jeho množině znaků byly přidány ty symboly s odpovídající hodnotou ze zvolených datasetů. Tím by se docílilo rozpoznání transformací, které v trénovací množině symbolů nebyly prve zahrnuty.
+K dalšímu zlepšení rozpoznávání by mohlo také vést trénování klasifikátoru znaky z více zdrojů. Kromě primárního datasetu, který udává i proces extrakce symbolů, by k jeho množině znaků byly přidány ty symboly s odpovídající hodnotou ze~zvolených datasetů. Tím by se docílilo rozpoznání transformací, které v trénovací množině symbolů nebyly prve zahrnuty.
 
 
 %% Závěry práce. V jazyce práce a anglicky. Text pro jiný než
@@ -750,11 +738,11 @@ K dalšímu zlepšení rozpoznávání by mohlo také vést trénování klasifi
 %% \documentclass, výchozí český) se zadává použitím makra s uvedením
 %% jazyka jako nepovinného parametru.
 \begin{kiconclusions}
-Vyvinutá webová aplikace úspěšně prolamuje některé typy známých CAPTCHA kódů. Existuje však mnoho prostoru pro další vývoj, který by usnadnil rozpoznávání dalších typů zabezpečení. Retrospektivně je však vhodné zmínit, že volba frameworku Flask se zdá být velice nešťastná vzhledem k ne příliš pohodlné práci s objektově-relačním mapováním. Přepsání webové aplikace například do Ruby on Rails se zachováním části obstarávající strojové učení v jazyce Python by mohlo být optimálnější pro snadnou udržitelnost aplikace.
+Vyvinutá webová aplikace úspěšně prolamuje některé typy známých CAPTCHA kódů. Existuje však mnoho prostoru pro další vývoj, který by usnadnil rozpoz\-návání dalších typů zabezpečení. Retrospektivně je také vhodné zmínit, že volba frameworku Flask se zdá být velice nešťastná vzhledem k ne příliš pohodlné práci s objektově-relačním mapováním nebo tvorbě administračního rozhraní. Přepsání webové aplikace například do Ruby on Rails se zachováním části obstarávající strojové učení v jazyce Python by mohlo být optimálnější pro snadnou udržitelnost aplikace.
 \end{kiconclusions}
 
 \begin{kiconclusions}[english]
-This developed web application succesfully breaks certain types of known CAPTCHA codes. However there is many possibilities of further development, which would make recongizing of other security types easier.  It is also worth mentioning that retrospecively the choice of the Flask framework seems to be very unfortune due to not so comfortable work with object-relational mapping. Rewriting the code base of web application e.g. into Ruby on Rails with retaining machine learning part in Python language would be more feasible because of better sustainability of the application. 
+Developed web application succesfully breaks certain types of known CAPTCHA codes. However there is many possibilities of further development, which would make recongizing of other security types easier.  It is also worth mentioning that retrospecively the choice of the Flask framework seems to be very unfortune due to not so comfortable work with object-relational mapping or creation of administration interface. Rewriting the code base of web application e.g. into Ruby on Rails with retaining machine learning part in Python language would be more feasible because of better sustainability of the application. 
 \end{kiconclusions}
 
 %% Přílohy obsahu textu práce, za makrem \appendix.
@@ -779,7 +767,7 @@ This developed web application succesfully breaks certain types of known CAPTCHA
 \end{description}
 
 U~veškerých cizích převzatých materiálů obsažených na CD/DVD jejich
-zahrnutí dovolují podmínky pro jejich šíření nebo přiložený souhlas
+zahr\-nutí dovolují podmínky pro jejich šíření nebo přiložený souhlas
 držitele copyrightu. Pro všechny použité (a~citované) materiály,
 u~kterých toto není splněno a~nejsou tak obsaženy na CD/DVD, je uveden
 jejich zdroj (např.~webová adresa) v~bibliografii nebo textu práce
