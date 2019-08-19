@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.8.11)  15 AUG 2019 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.8.11)  19 AUG 2019 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1379,6 +1379,10 @@ Package biblatex Info: Reference segment=0 on input line 120.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 120.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 120.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1431,12 +1435,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 125.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
-[]|\T1/lmr/m/n/12 Vedoucí práce: Mgr. Mar-tin
- []
-
-[1
+) [1
 
 \openout3 = `kidiplom.ist'.
 
@@ -1445,19 +1444,23 @@ kititle-cz-nofont.pdf> <./graphics/UP_znak.pdf>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 125.
 
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+[]|\T1/lmr/m/n/10.95 Mgr. Mar-tin
+ []
+
+
 Underfull \hbox (badness 1789) in paragraph at lines 125--125
 []|\T1/lmr/m/n/10.95 Department of Com-puter Sci-ence, Fac-ulty of Sci-ence,
  []
 
-[2] [3
 
-]
-Overfull \hbox (8.27167pt too wide) in paragraph at lines 125--125
-\T1/lmr/m/it/12 Místop°íseºn¥ prohla²uji, ºe jsem celou práci v£etn¥ p°íloh vyp
-ra-co-v-al/a samostatn¥
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+[]|\T1/lmr/m/n/10.95 Mgr. Mar-tin
  []
 
-[4
+[2] [3
+
+] [4
 
 ] (./kidiplom.toc)
 \tf@toc=\write10
@@ -1499,62 +1502,55 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 139.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 139.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
-[][][][][]$\T1/lmr/m/n/10 https : / / trends . google . com / trends / explore 
-? date = all & q = %2Fm % 2F01hyh _ ,[] % 2Fg %
- []
-
-[7
+ [7
 
 ] [8]
-<images/text_image_captcha.jpg, id=175, 313.17pt x 123.46124pt>
+<images/text_image_captcha.jpg, id=174, 313.17pt x 123.46124pt>
 File: images/text_image_captcha.jpg Graphic file (type jpg)
 <use images/text_image_captcha.jpg>
 Package pdftex.def Info: images/text_image_captcha.jpg  used on input line 163.
 
 (pdftex.def)             Requested size: 250.53633pt x 98.7691pt.
-<images/squares.png, id=182, 402.50375pt x 582.175pt>
+<images/squares.png, id=181, 402.50375pt x 582.175pt>
 File: images/squares.png Graphic file (type png)
 <use images/squares.png>
 Package pdftex.def Info: images/squares.png  used on input line 176.
 (pdftex.def)             Requested size: 163.80109pt x 236.91664pt.
-<images/geetest_select.png, id=183, 365.365pt x 462.72874pt>
+<images/geetest_select.png, id=182, 365.365pt x 462.72874pt>
 File: images/geetest_select.png Graphic file (type png)
 <use images/geetest_select.png>
 Package pdftex.def Info: images/geetest_select.png  used on input line 182.
 (pdftex.def)             Requested size: 163.80109pt x 207.44934pt.
  [9 <./images/text_image_captcha.jpg>]
-<images/nocaptcha.png, id=193, 310.15875pt x 82.3075pt>
+<images/nocaptcha.png, id=191, 310.15875pt x 82.3075pt>
 File: images/nocaptcha.png Graphic file (type png)
 <use images/nocaptcha.png>
 Package pdftex.def Info: images/nocaptcha.png  used on input line 197.
 (pdftex.def)             Requested size: 163.80109pt x 43.46828pt.
-<images/geetest_click.png, id=194, 309.155pt x 53.19875pt>
+<images/geetest_click.png, id=192, 309.155pt x 53.19875pt>
 File: images/geetest_click.png Graphic file (type png)
 <use images/geetest_click.png>
 Package pdftex.def Info: images/geetest_click.png  used on input line 203.
 (pdftex.def)             Requested size: 163.80109pt x 28.18707pt.
  [10 <./images/squares.png> <./images/geetest_select.png> <./images/nocaptcha.p
 ng> <./images/geetest_click.png>]
-<images/geetest.png, id=203, 276.03125pt x 280.04625pt>
+<images/geetest.png, id=201, 276.03125pt x 280.04625pt>
 File: images/geetest.png Graphic file (type png)
 <use images/geetest.png>
 Package pdftex.def Info: images/geetest.png  used on input line 216.
 (pdftex.def)             Requested size: 193.22055pt x 196.03102pt.
-
-[11 <./images/geetest.png>] [12]
+ [11 <./images/geetest.png>] [12]
 <images/eet.png, id=234, 301.125pt x 76.285pt>
 File: images/eet.png Graphic file (type png)
 <use images/eet.png>
 Package pdftex.def Info: images/eet.png  used on input line 240.
 (pdftex.def)             Requested size: 150.56212pt x 38.1424pt.
-<images/kamody.jpg, id=235, 112.92188pt x 26.34843pt>
+<images/kamody.jpg, id=236, 112.92188pt x 26.34843pt>
 File: images/kamody.jpg Graphic file (type jpg)
 <use images/kamody.jpg>
 Package pdftex.def Info: images/kamody.jpg  used on input line 246.
 (pdftex.def)             Requested size: 112.92159pt x 26.34836pt.
-<images/datovka.png, id=238, 301.125pt x 76.285pt>
+<images/datovka.png, id=240, 301.125pt x 76.285pt>
 File: images/datovka.png Graphic file (type png)
 <use images/datovka.png>
 Package pdftex.def Info: images/datovka.png  used on input line 252.
@@ -1565,12 +1561,12 @@ Overfull \hbox (1.13475pt too wide) in paragraph at lines 249--253
 ][] 
  []
 
-<images/telerik.jpg, id=239, 135.50626pt x 37.64063pt>
+<images/telerik.jpg, id=242, 135.50626pt x 37.64063pt>
 File: images/telerik.jpg Graphic file (type jpg)
 <use images/telerik.jpg>
 Package pdftex.def Info: images/telerik.jpg  used on input line 258.
 (pdftex.def)             Requested size: 135.5059pt x 37.64052pt.
-<images/ulozto.jpg, id=240, 131.74219pt x 52.69687pt>
+<images/ulozto.jpg, id=244, 131.74219pt x 52.69687pt>
 File: images/ulozto.jpg Graphic file (type jpg)
 <use images/ulozto.jpg>
 Package pdftex.def Info: images/ulozto.jpg  used on input line 264.
@@ -1583,167 +1579,167 @@ g-[]framework-[]power-[]scores-[]2018-[]23607ddf297a$[][]|
  []
 
 [14]
-<images/website_public.png, id=271, 634.37pt x 472.76625pt>
+<images/website_public.png, id=275, 634.37pt x 472.76625pt>
 File: images/website_public.png Graphic file (type png)
 <use images/website_public.png>
 Package pdftex.def Info: images/website_public.png  used on input line 305.
 (pdftex.def)             Requested size: 380.62492pt x 283.66193pt.
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 \T1/lmr/m/n/12 Odpov¥¤ v p°í-pad¥ rozpoznání
  []
 
 
-Overfull \hbox (1.81891pt too wide) in paragraph at lines 349--350
+Overfull \hbox (1.81891pt too wide) in paragraph at lines 348--349
 \T1/lmr/m/n/12 p°ís-tupu. P°ih-la²o-vací údaje jsou kon-trolovány v·£i kon-stan
 -tám \T1/pcr/m/n/12 APP_USERNAME\T1/lmr/m/n/12 ,
  []
 
 [16 <./images/website_public.png>]
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 351.
-<images/datasets_new.png, id=287, 306.4248pt x 325.4559pt>
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 350.
+<images/datasets_new.png, id=291, 306.4248pt x 325.4559pt>
 File: images/datasets_new.png Graphic file (type png)
 <use images/datasets_new.png>
-Package pdftex.def Info: images/datasets_new.png  used on input line 359.
+Package pdftex.def Info: images/datasets_new.png  used on input line 358.
 (pdftex.def)             Requested size: 306.42404pt x 325.45511pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<images/grayscale_original.jpg, id=299, 112.92188pt x 26.34843pt>
+<images/grayscale_original.jpg, id=303, 112.92188pt x 26.34843pt>
 File: images/grayscale_original.jpg Graphic file (type jpg)
 <use images/grayscale_original.jpg>
-Package pdftex.def Info: images/grayscale_original.jpg  used on input line 381.
+Package pdftex.def Info: images/grayscale_original.jpg  used on input line 380.
 
 (pdftex.def)             Requested size: 163.80109pt x 38.22513pt.
-<images/grayscale_result.png, id=300, 150.5625pt x 35.13126pt>
+<images/grayscale_result.png, id=304, 150.5625pt x 35.13126pt>
 File: images/grayscale_result.png Graphic file (type png)
 <use images/grayscale_result.png>
-Package pdftex.def Info: images/grayscale_result.png  used on input line 385.
+Package pdftex.def Info: images/grayscale_result.png  used on input line 384.
 (pdftex.def)             Requested size: 163.80109pt x 38.22366pt.
  [18 <./images/datasets_new.png>]
-<images/crop_original.png, id=307, 150.5625pt x 35.13126pt>
+<images/crop_original.png, id=311, 150.5625pt x 35.13126pt>
 File: images/crop_original.png Graphic file (type png)
 <use images/crop_original.png>
-Package pdftex.def Info: images/crop_original.png  used on input line 410.
+Package pdftex.def Info: images/crop_original.png  used on input line 409.
 (pdftex.def)             Requested size: 163.80109pt x 38.22366pt.
-<images/crop_result.png, id=308, 144.54pt x 29.10875pt>
+<images/crop_result.png, id=312, 144.54pt x 29.10875pt>
 File: images/crop_result.png Graphic file (type png)
 <use images/crop_result.png>
-Package pdftex.def Info: images/crop_result.png  used on input line 414.
+Package pdftex.def Info: images/crop_result.png  used on input line 413.
 (pdftex.def)             Requested size: 163.80109pt x 32.98932pt.
 
-Overfull \hbox (2.92982pt too wide) in paragraph at lines 421--422
+Overfull \hbox (2.92982pt too wide) in paragraph at lines 420--421
 \T1/lmr/m/n/12 do binární £er-nobílé podoby. In-tern¥ Otsovo pra-hování an-a-ly
 zuje his-togram vstup-
  []
 
-<images/otsu_original.png, id=309, 146.5475pt x 31.11626pt>
+<images/otsu_original.png, id=313, 146.5475pt x 31.11626pt>
 File: images/otsu_original.png Graphic file (type png)
 <use images/otsu_original.png>
-Package pdftex.def Info: images/otsu_original.png  used on input line 428.
+Package pdftex.def Info: images/otsu_original.png  used on input line 427.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/otsu_result.png, id=310, 146.5475pt x 31.11626pt>
+<images/otsu_result.png, id=314, 146.5475pt x 31.11626pt>
 File: images/otsu_result.png Graphic file (type png)
 <use images/otsu_result.png>
-Package pdftex.def Info: images/otsu_result.png  used on input line 432.
+Package pdftex.def Info: images/otsu_result.png  used on input line 431.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/inverse_original.png, id=311, 146.5475pt x 31.11626pt>
+<images/inverse_original.png, id=315, 146.5475pt x 31.11626pt>
 File: images/inverse_original.png Graphic file (type png)
 <use images/inverse_original.png>
-Package pdftex.def Info: images/inverse_original.png  used on input line 444.
+Package pdftex.def Info: images/inverse_original.png  used on input line 443.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/inverse_result.png, id=312, 146.5475pt x 31.11626pt>
+<images/inverse_result.png, id=316, 146.5475pt x 31.11626pt>
 File: images/inverse_result.png Graphic file (type png)
 <use images/inverse_result.png>
-Package pdftex.def Info: images/inverse_result.png  used on input line 448.
+Package pdftex.def Info: images/inverse_result.png  used on input line 447.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
 [19 <./images/grayscale_original.jpg> <./images/grayscale_result.png (PNG copy)
 > <./images/crop_original.png (PNG copy)> <./images/crop_result.png (PNG copy)>
  <./images/otsu_original.png (PNG copy)> <./images/otsu_result.png (PNG copy)> 
 <./images/inverse_original.png (PNG copy)> <./images/inverse_result.png (PNG co
 py)>]
-<images/custom_original.png, id=321, 146.5475pt x 31.11626pt>
+<images/custom_original.png, id=325, 146.5475pt x 31.11626pt>
 File: images/custom_original.png Graphic file (type png)
 <use images/custom_original.png>
-Package pdftex.def Info: images/custom_original.png  used on input line 476.
+Package pdftex.def Info: images/custom_original.png  used on input line 475.
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/custom_result_0_50.png, id=322, 146.5475pt x 31.11626pt>
+<images/custom_result_0_50.png, id=326, 146.5475pt x 31.11626pt>
 File: images/custom_result_0_50.png Graphic file (type png)
 <use images/custom_result_0_50.png>
-Package pdftex.def Info: images/custom_result_0_50.png  used on input line 480.
+Package pdftex.def Info: images/custom_result_0_50.png  used on input line 479.
 
 (pdftex.def)             Requested size: 163.80109pt x 34.77968pt.
-<images/filter_original.png, id=323, 180.675pt x 50.1875pt>
+<images/filter_original.png, id=327, 180.675pt x 50.1875pt>
 File: images/filter_original.png Graphic file (type png)
 <use images/filter_original.png>
-Package pdftex.def Info: images/filter_original.png  used on input line 492.
+Package pdftex.def Info: images/filter_original.png  used on input line 491.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/filter_result.png, id=324, 180.675pt x 50.1875pt>
+<images/filter_result.png, id=328, 180.675pt x 50.1875pt>
 File: images/filter_result.png Graphic file (type png)
 <use images/filter_result.png>
-Package pdftex.def Info: images/filter_result.png  used on input line 496.
+Package pdftex.def Info: images/filter_result.png  used on input line 495.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
  [20 <./images/custom_original.png (PNG copy)> <./images/custom_result_0_50.png
  (PNG copy)> <./images/filter_original.png (PNG copy)> <./images/filter_result.
 png (PNG copy)>]
-<images/kernel_square.png, id=333, 180.675pt x 50.1875pt>
+<images/kernel_square.png, id=340, 180.675pt x 50.1875pt>
 File: images/kernel_square.png Graphic file (type png)
 <use images/kernel_square.png>
-Package pdftex.def Info: images/kernel_square.png  used on input line 559.
+Package pdftex.def Info: images/kernel_square.png  used on input line 556.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/kernel_cross.png, id=334, 180.675pt x 50.1875pt>
+<images/kernel_cross.png, id=341, 180.675pt x 50.1875pt>
 File: images/kernel_cross.png Graphic file (type png)
 <use images/kernel_cross.png>
-Package pdftex.def Info: images/kernel_cross.png  used on input line 563.
+Package pdftex.def Info: images/kernel_cross.png  used on input line 560.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/erosion_original.png, id=335, 180.675pt x 50.1875pt>
+<images/erosion_original.png, id=342, 180.675pt x 50.1875pt>
 File: images/erosion_original.png Graphic file (type png)
 <use images/erosion_original.png>
-Package pdftex.def Info: images/erosion_original.png  used on input line 575.
+Package pdftex.def Info: images/erosion_original.png  used on input line 572.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/erosion_result.png, id=336, 180.675pt x 50.1875pt>
+<images/erosion_result.png, id=343, 180.675pt x 50.1875pt>
 File: images/erosion_result.png Graphic file (type png)
 <use images/erosion_result.png>
-Package pdftex.def Info: images/erosion_result.png  used on input line 579.
+Package pdftex.def Info: images/erosion_result.png  used on input line 576.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/dilation_original.png, id=337, 180.675pt x 50.1875pt>
+<images/dilation_original.png, id=344, 180.675pt x 50.1875pt>
 File: images/dilation_original.png Graphic file (type png)
 <use images/dilation_original.png>
-Package pdftex.def Info: images/dilation_original.png  used on input line 591.
+Package pdftex.def Info: images/dilation_original.png  used on input line 588.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/dilation_result.png, id=338, 180.675pt x 50.1875pt>
+<images/dilation_result.png, id=345, 180.675pt x 50.1875pt>
 File: images/dilation_result.png Graphic file (type png)
 <use images/dilation_result.png>
-Package pdftex.def Info: images/dilation_result.png  used on input line 595.
+Package pdftex.def Info: images/dilation_result.png  used on input line 592.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
  [21 <./images/kernel_square.png (PNG copy)> <./images/kernel_cross.png (PNG co
 py)> <./images/erosion_original.png (PNG copy)> <./images/erosion_result.png (P
 NG copy)>]
-<images/closing_original.png, id=349, 180.675pt x 50.1875pt>
+<images/closing_original.png, id=353, 180.675pt x 50.1875pt>
 File: images/closing_original.png Graphic file (type png)
 <use images/closing_original.png>
-Package pdftex.def Info: images/closing_original.png  used on input line 607.
+Package pdftex.def Info: images/closing_original.png  used on input line 604.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/closing_result.png, id=350, 180.675pt x 50.1875pt>
+<images/closing_result.png, id=354, 180.675pt x 50.1875pt>
 File: images/closing_result.png Graphic file (type png)
 <use images/closing_result.png>
-Package pdftex.def Info: images/closing_result.png  used on input line 611.
+Package pdftex.def Info: images/closing_result.png  used on input line 608.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/opening_original.png, id=351, 180.675pt x 50.1875pt>
+<images/opening_original.png, id=355, 180.675pt x 50.1875pt>
 File: images/opening_original.png Graphic file (type png)
 <use images/opening_original.png>
-Package pdftex.def Info: images/opening_original.png  used on input line 623.
+Package pdftex.def Info: images/opening_original.png  used on input line 620.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
-<images/opening_result.png, id=352, 180.675pt x 50.1875pt>
+<images/opening_result.png, id=356, 180.675pt x 50.1875pt>
 File: images/opening_result.png Graphic file (type png)
 <use images/opening_result.png>
-Package pdftex.def Info: images/opening_result.png  used on input line 627.
+Package pdftex.def Info: images/opening_result.png  used on input line 624.
 (pdftex.def)             Requested size: 163.80109pt x 45.50067pt.
 
-Overfull \hbox (0.89128pt too wide) in paragraph at lines 650--651
+Overfull \hbox (0.89128pt too wide) in paragraph at lines 647--648
 \T1/lmr/m/n/12 poruje kni-hovna OpenCV. Ke spu²t¥ní ex-trakce je také pot°eba i
 n-for-mace o po£tu
  []
@@ -1752,54 +1748,60 @@ n-for-mace o po£tu
 PNG copy)> <./images/closing_original.png (PNG copy)> <./images/closing_result.
 png (PNG copy)> <./images/opening_original.png (PNG copy)> <./images/opening_re
 sult.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 655.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 652.
 
  (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 655.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 652.
 
-Overfull \hbox (3.25226pt too wide) in paragraph at lines 662--663
+Overfull \hbox (3.25226pt too wide) in paragraph at lines 659--660
 \T1/lmr/m/n/12 správ-nou kat-e-gorii na zák-lad¥ tréno-vacích dat, se kterými b
 yl al-go-rit-mus trénován.
  []
 
+[23]
+Overfull \hbox (0.90485pt too wide) in paragraph at lines 669--670
+\T1/lmr/m/n/12 podoby, aby v kone£ném d·sledku pro-duko-vala neu-ronová sí´ rel
+-e-vantní odpov¥di.
+ []
 
-Underfull \hbox (badness 1400) in paragraph at lines 686--686
+[24]
+Underfull \hbox (badness 1400) in paragraph at lines 709--709
 []\T1/lmr/m/n/12 Tabulka 6: |Úsp¥²nost rozpoznání jed-notlivých sym-bol· CAPTCH
 A kód·
  []
 
-[23] [24] [25] [26
+[25] [26] [27] [28
 
-] [27
+] [29
 
 ]
-Overfull \hbox (4.00964pt too wide) in paragraph at lines 761--763
+Overfull \hbox (4.00964pt too wide) in paragraph at lines 786--788
 \T1/lmr/m/n/12 pot°eb-nými (p°íp. p°evza-tými) kni-hov-nami. Dos-tupné také z [
 ][]$https : / / github .
  []
 
-[28
+[30
 
-] (./kidiplom.acr) [29
+] (./kidiplom.acr) [31
 
 ]
-Overfull \hbox (13.18135pt too wide) in paragraph at lines 787--787
+Overfull \hbox (13.18135pt too wide) in paragraph at lines 812--812
 \T1/lmr/m/n/12 John C. The End is Nigh: Generic Solv-ing of Text-based CAPTCHAs
 . In. \T1/lmr/m/it/12 WOOT'14
  []
 
-[30
+[32
 
 ] (./kidiplom.ind) 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 800.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 800.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 825.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 825.
 (./kidiplom.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 800.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 800.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 825.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 825.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1807,37 +1809,40 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'kidiplom.run.xml'.
 \openout1 = `kidiplom.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 800.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 825.
  ) 
 Here is how much of TeX's memory you used:
- 29980 strings out of 494587
- 490743 string characters out of 6177759
- 1150002 words of memory out of 5000000
- 32898 multiletter control sequences out of 15000+600000
+ 29993 strings out of 494587
+ 490989 string characters out of 6177759
+ 1149057 words of memory out of 5000000
+ 32903 multiletter control sequences out of 15000+600000
  83272 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  61i,13n,94p,2602b,2976s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/f
-onts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
-base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/u
-sr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/te
+ve/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/f
+onts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/te
 xmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm
 /lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/l
-m/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on kidiplom.pdf (30 pages, 1410704 bytes).
+ve/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm
+/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
+ourier/ucrr8a.pfb>
+Output written on kidiplom.pdf (32 pages, 1428649 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 155 named destinations out of 1000 (max. 500000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 525 compressed objects within 6 object streams
+ 163 named destinations out of 1000 (max. 500000)
  370 words of extra memory for PDF output out of 10000 (max. 10000000)
 

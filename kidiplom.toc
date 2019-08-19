@@ -25,20 +25,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6}Tvorba klasifik\IeC {\'a}toru}{23}{subsection.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}\IeC {\'U}sp\IeC {\v e}\IeC {\v s}nost implementovan\IeC {\'e} metody prolamov\IeC {\'a}n\IeC {\'\i }}{23}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.7}\IeC {\'U}sp\IeC {\v e}\IeC {\v s}nost implementovan\IeC {\'e} metody prolamov\IeC {\'a}n\IeC {\'\i }}{25}{subsection.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8}Dal\IeC {\v s}\IeC {\'\i } v\IeC {\'y}voj}{24}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.8}Dal\IeC {\v s}\IeC {\'\i } v\IeC {\'y}voj}{26}{subsection.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Z\'av\v er}{26}{section*.74}
+\contentsline {section}{Z\'av\v er}{28}{section*.79}
 \babel@toc {czech}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusions}{27}{section*.76}
+\contentsline {section}{Conclusions}{29}{section*.81}
 \babel@toc {english}{}
 \babel@toc {czech}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{28}{appendix.A}
+\contentsline {section}{\numberline {A}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD/DVD}{30}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Seznam zkratek}{29}{section*.78}
+\contentsline {section}{Seznam zkratek}{31}{section*.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatura}{30}{section*.79}
+\contentsline {section}{Literatura}{32}{section*.84}

@@ -146,6 +146,40 @@
       \field{title}{How to Mimic Humans, Guide for Computers}
       \field{year}{2016}
     \endentry
+    \entry{mnist}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=17acda211a651e90e228f1776ee07818}{%
+           family={Cortes},
+           familyi={C\bibinitperiod},
+           given={Corinna},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \strng{fullhash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \strng{bibnamehash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \strng{authorbibnamehash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \strng{authornamehash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \strng{authorfullhash}{9efbfd2a4a8416bfe3ef496e12b597e0}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://yann.lecun.com/exdb/mnist/}
+      \field{title}{{MNIST} handwritten digit database}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb http://yann.lecun.com/exdb/mnist/
+      \endverb
+      \verb{url}
+      \verb http://yann.lecun.com/exdb/mnist/
+      \endverb
+      \keyw{MSc _checked character_recognition mnist network neural}
+    \endentry
     \entry{documentation:flask}{misc}{}
       \name{author}{1}{}{%
         {{hash=3f9cff795224f5232cca142b122d6d46}{%
